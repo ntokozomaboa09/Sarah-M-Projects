@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Sarah M Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Sarah M Projects Logo" class="logo-image">
+                    <div class="logo-text">
+                        <h1>Sarah M Projects</h1>
+                        <span>Supplies, Logistics & Equipment Rentals</span>
+                    </div>
+                </a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch for supplies, logistics, and equipment rental solutions</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-page">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info-section">
+                    <h2>Get in Touch</h2>
+                    <p>Contact Sarah M Projects for reliable supplies, logistics, and equipment rental solutions tailored to your project needs.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h3>Location</h3>
+                                <p>South Africa</p>
+                                <small>Serving projects nationwide</small>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h3>Phone Number</h3>
+                                <p><a href="tel:0674031185">067 403 1185</a></p>
+                                <small>Mon-Fri: 8:00-17:00 | Sat: 9:00-13:00</small>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h3>Primary Email</h3>
+                                <p><a href="mailto:ntokozomaboa0209@gmail.com">ntokozomaboa0209@gmail.com</a></p>
+                                <small>Primary contact email</small>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h3>Alternative Email</h3>
+                                <p><a href="mailto:ntokozomaboa9@icloud.com">ntokozomaboa9@icloud.com</a></p>
+                                <small>Alternative contact email</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="emergency-contact">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Emergency After-Hours</h3>
+                        <p>For urgent equipment or supply needs outside business hours:</p>
+                        <p><strong><a href="tel:0674031185">067 403 1185</a></strong></p>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <h2>Send us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+                    
+                    <form id="contactForm" action="https://formspree.io/f/xqebbyev" method="POST">
+                        <input type="hidden" name="_subject" value="New Contact Form Submission - Sarah M Projects">
+                        <input type="hidden" name="_replyto" value="ntokozomaboa0209@gmail.com">
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Interest *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="supplies">Mining & Industrial Supplies</option>
+                                <option value="logistics">Logistics Services</option>
+                                <option value="rentals">Equipment Rentals</option>
+                                <option value="multiple">Multiple Services</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="form-row">
+                                <input type="checkbox" id="consent" name="consent" required>
+                                <label for="consent">I consent to Sarah M Projects contacting me regarding my inquiry *</label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-block">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                        
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
+                    
+                    <div class="form-note">
+                        <p><small>* Required fields. We respect your privacy and will not share your information.</small></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Map & Location -->
+            <div class="location-section">
+                <h2>Service Areas</h2>
+                <p>We provide services to mining, construction, and industrial projects across South Africa including:</p>
+                
+                <div class="service-areas">
+                    <div class="area-card">
+                        <h3><i class="fas fa-map-pin"></i> Gauteng Province</h3>
+                        <p>Johannesburg, Pretoria, Ekurhuleni, West Rand</p>
+                    </div>
+                    <div class="area-card">
+                        <h3><i class="fas fa-map-pin"></i> Limpopo Province</h3>
+                        <p>Mining regions, Polokwane, construction projects</p>
+                    </div>
+                    <div class="area-card">
+                        <h3><i class="fas fa-map-pin"></i> Mpumalanga Province</h3>
+                        <p>Mining operations, power stations, industrial sites</p>
+                    </div>
+                    <div class="area-card">
+                        <h3><i class="fas fa-map-pin"></i> Nationwide Projects</h3>
+                        <p>Major construction and industrial developments</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Sarah M Projects Logo" class="footer-logo-img">
+                    </div>
+                    <h3>Sarah M Projects</h3>
+                    <p>Supplies, Logistics & Equipment Rentals for mining, construction, and industrial projects.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#supplies">Industrial Supplies</a></li>
+                        <li><a href="services.html#logistics">Logistics Services</a></li>
+                        <li><a href="services.html#rentals">Equipment Rentals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> South Africa</p>
+                        <p><i class="fas fa-phone"></i> 067 403 1185</p>
+                        <p><i class="fas fa-envelope"></i> ntokozomaboa0209@gmail.com</p>
+                        <p><i class="fas fa-envelope"></i> ntokozomaboa9@icloud.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Sarah M Projects. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
