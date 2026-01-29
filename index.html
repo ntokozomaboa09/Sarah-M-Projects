@@ -576,7 +576,7 @@
                             </div>
                             <div>
                                 <h4>Phone</h4>
-                                <p>+27 XX XXX XXXX</p>
+                                <p>067 403 1185</p>
                             </div>
                         </div>
                     </div>
@@ -624,6 +624,15 @@
                             <p>ntokozomaboa9@icloud.com</p>
                         </div>
                     </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>067 403 1185</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -641,7 +650,7 @@
                     <p>Safety Compliance | Operational Efficiency | Service Excellence</p>
                 </div>
                 <div class="copyright">
-                    <p>&copy; 2023 Sarah M Projects. All rights reserved.</p>
+                    <p>&copy; 2026 Sarah M Projects. All rights reserved.</p>
                 </div>
             </div>
         </div>
@@ -668,7 +677,18 @@
         const contactForm = document.getElementById('contactForm');
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Thank you for your message. We will get back to you soon!');
+            
+            // Get form values
+            const name = contactForm.querySelector('input[type="text"]').value;
+            const email = contactForm.querySelector('input[type="email"]').value;
+            const subject = contactForm.querySelectorAll('input[type="text"]')[1].value;
+            const message = contactForm.querySelector('textarea').value;
+            
+            // In a real application, you would send this data to a server
+            // For now, we'll just show a success message
+            alert(`Thank you ${name}! Your message has been sent successfully. We will contact you at ${email} soon.`);
+            
+            // Reset form
             contactForm.reset();
         });
         
@@ -688,6 +708,56 @@
                     });
                 }
             });
+        });
+        
+        // Add active class to current navigation item
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('#navMenu a');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if(scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Add click-to-call functionality for phone numbers
+        const phoneNumbers = document.querySelectorAll('.contact-item h4 + p');
+        phoneNumbers.forEach(phone => {
+            if(phone.textContent.includes('067')) {
+                phone.style.cursor = 'pointer';
+                phone.style.textDecoration = 'underline';
+                phone.title = 'Click to call';
+                phone.addEventListener('click', () => {
+                    const phoneNumber = phone.textContent.replace(/\s/g, '');
+                    window.location.href = `tel:${phoneNumber}`;
+                });
+            }
+        });
+        
+        // Add click-to-email functionality for email addresses
+        const emailAddresses = document.querySelectorAll('.contact-item h4 + p');
+        emailAddresses.forEach(email => {
+            if(email.textContent.includes('@')) {
+                email.style.cursor = 'pointer';
+                email.style.textDecoration = 'underline';
+                email.title = 'Click to send email';
+                email.addEventListener('click', () => {
+                    window.location.href = `mailto:${email.textContent}`;
+                });
+            }
         });
     </script>
 </body>
