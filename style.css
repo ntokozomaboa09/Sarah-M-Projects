@@ -126,8 +126,7 @@ nav a {
     transition: color 0.3s ease;
 }
 
-nav a:hover,
-nav a.active {
+nav a:hover, nav a.active {
     color: #000000;
 }
 
@@ -370,8 +369,7 @@ nav a.active::after {
     transition: all 0.3s ease;
 }
 
-.nav-link:hover,
-.nav-link.active {
+.nav-link:hover, .nav-link.active {
     background-color: #000000;
     color: white;
     border-color: #000000;
@@ -686,8 +684,7 @@ nav a.active::after {
     margin-bottom: 60px;
 }
 
-.contact-info-section h2,
-.contact-form-section h2 {
+.contact-info-section h2, .contact-form-section h2 {
     font-size: 1.8rem;
     color: #000000;
     margin-bottom: 15px;
@@ -784,9 +781,7 @@ nav a.active::after {
     color: #333;
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
+.form-group input, .form-group select, .form-group textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ddd;
@@ -796,9 +791,7 @@ nav a.active::after {
     background-color: #f9f9f9;
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
     outline: none;
     border-color: #000000;
 }
@@ -892,8 +885,7 @@ footer {
     margin-bottom: 40px;
 }
 
-.footer-col h3,
-.footer-col h4 {
+.footer-col h3, .footer-col h4 {
     margin-bottom: 20px;
 }
 
