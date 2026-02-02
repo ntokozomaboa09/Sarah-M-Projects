@@ -5,417 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sarah M Projects | Supplies, Logistics & Equipment Rentals</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #fff;
-            max-width: 100%;
-            overflow-x: hidden;
-        }
-        
-        h1, h2, h3, h4 {
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-        
-        p {
-            margin-bottom: 1rem;
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        
-        section {
-            padding: 4rem 0;
-        }
-        
-        .btn {
-            display: inline-block;
-            background-color: #000;
-            color: #fff;
-            padding: 0.8rem 1.8rem;
-            text-decoration: none;
-            border: 2px solid #000;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .btn:hover {
-            background-color: #fff;
-            color: #000;
-        }
-        
-        .btn-outline {
-            background-color: transparent;
-            color: #000;
-            border: 2px solid #000;
-        }
-        
-        .btn-outline:hover {
-            background-color: #000;
-            color: #fff;
-        }
-        
-        /* Header Styles */
-        header {
-            background-color: #fff;
-            padding: 1rem 0;
-            border-bottom: 1px solid #eee;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo h1 {
-            font-size: 1.8rem;
-            margin-bottom: 0;
-            color: #000;
-        }
-        
-        .logo span {
-            font-size: 0.9rem;
-            color: #666;
-            display: block;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 2rem;
-        }
-        
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        nav ul li a:hover {
-            color: #000;
-            border-bottom: 2px solid #000;
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background-color: #f8f8f8;
-            padding: 6rem 0;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            color: #000;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            color: #555;
-        }
-        
-        /* Services Section */
-        .services {
-            background-color: #fff;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-        
-        .section-title h2 {
-            font-size: 2.5rem;
-            display: inline-block;
-            color: #000;
-        }
-        
-        .section-title h2:after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 3px;
-            background-color: #000;
-            margin: 0.5rem auto;
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .service-card {
-            border: 1px solid #eee;
-            padding: 2rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-            background-color: #fff;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .service-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: #000;
-        }
-        
-        .service-card h3 {
-            font-size: 1.5rem;
-            color: #000;
-        }
-        
-        .service-card ul {
-            list-style-position: inside;
-            margin-bottom: 1.5rem;
-        }
-        
-        .service-card ul li {
-            margin-bottom: 0.5rem;
-        }
-        
-        /* About Section */
-        .about {
-            background-color: #f8f8f8;
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        
-        .about-text h2 {
-            font-size: 2.5rem;
-            color: #000;
-        }
-        
-        .markets-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        .market-item {
-            text-align: center;
-            padding: 1.5rem;
-            border: 1px solid #eee;
-            background-color: #fff;
-        }
-        
-        .market-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #000;
-        }
-        
-        /* Commitment Section */
-        .commitment {
-            background-color: #fff;
-        }
-        
-        .commitment-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        /* Contact Section */
-        .contact {
-            background-color: #f8f8f8;
-        }
-        
-        .contact-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-        }
-        
-        .contact-info h3 {
-            font-size: 1.8rem;
-            color: #000;
-        }
-        
-        .contact-details {
-            margin-top: 2rem;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-        
-        .contact-icon {
-            width: 40px;
-            height: 40px;
-            background-color: #000;
-            color: #fff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 1rem;
-        }
-        
-        .developer-contact {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid #ddd;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: #000;
-            color: #fff;
-            padding: 3rem 0;
-            text-align: center;
-        }
-        
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        
-        .footer-logo h3 {
-            color: #fff;
-            font-size: 1.5rem;
-        }
-        
-        .copyright {
-            margin-top: 2rem;
-            width: 100%;
-            color: #aaa;
-            font-size: 0.9rem;
-        }
-        
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .markets-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            nav ul {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: #fff;
-                flex-direction: column;
-                padding: 1rem 0;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-            }
-            
-            nav ul.show {
-                display: flex;
-            }
-            
-            nav ul li {
-                margin: 0;
-                text-align: center;
-                padding: 0.8rem 0;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .markets-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero {
-                padding: 4rem 0;
-            }
-            
-            .section-title h2 {
-                font-size: 2rem;
-            }
-            
-            section {
-                padding: 3rem 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container header-container">
             <div class="logo">
-                <h1>Sarah M Projects</h1>
-                <span>Supplies, Logistics & Equipment Rentals</span>
+                <a href="/">
+                    <img src="logo.png" alt="Sarah M Projects Logo" class="logo-image">
+                    <div class="logo-text">
+                        <h1>Sarah M Projects</h1>
+                        <span>Supplies, Logistics & Equipment Rentals</span>
+                    </div>
+                </a>
             </div>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
             <nav>
                 <ul id="navMenu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#commitment">Commitment</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -426,31 +40,28 @@
         <div class="container">
             <h1>Reliable Operational Support for Mining, Construction & Industrial Projects</h1>
             <p>Sarah M Projects delivers essential supplies, dependable logistics, and flexible equipment rentals with a commitment to safety compliance, operational efficiency, and service excellence.</p>
-            <a href="#services" class="btn">Our Services</a>
-            <a href="#contact" class="btn btn-outline">Contact Us</a>
+            <div class="hero-buttons">
+                <a href="services.html" class="btn">Our Services</a>
+                <a href="contact.html" class="btn btn-outline">Get a Quote</a>
+            </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
+    <!-- Services Preview -->
+    <section class="services-preview">
         <div class="container">
             <div class="section-title">
-                <h2>Our Services</h2>
+                <h2>Our Core Services</h2>
+                <p>Comprehensive solutions for your project needs</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-hard-hat"></i>
                     </div>
-                    <h3>Mining & Industrial Supplies</h3>
-                    <p>We supply a comprehensive range of essential mine and site consumables that meet industry safety standards and operational requirements.</p>
-                    <ul>
-                        <li>Personal Protective Equipment (PPE)</li>
-                        <li>Gumboots and safety footwear</li>
-                        <li>Protective clothing and workwear</li>
-                        <li>Safety helmets, gloves, and reflective wear</li>
-                        <li>Safety signage and general site consumables</li>
-                    </ul>
+                    <h3>Industrial Supplies</h3>
+                    <p>Compliant PPE, safety equipment, and essential site consumables meeting industry standards.</p>
+                    <a href="services.html#supplies" class="service-link">Learn More →</a>
                 </div>
                 
                 <div class="service-card">
@@ -458,307 +69,108 @@
                         <i class="fas fa-truck-moving"></i>
                     </div>
                     <h3>Logistics Services</h3>
-                    <p>We offer dependable logistics solutions to support operational continuity across various project requirements.</p>
-                    <ul>
-                        <li>Transportation of goods, materials, and equipment</li>
-                        <li>Site-to-site and long-distance deliveries</li>
-                        <li>Project-based and ad hoc logistics support</li>
-                        <li>Timely and reliable delivery solutions</li>
-                    </ul>
+                    <p>Reliable transportation and delivery solutions for materials, equipment, and goods.</p>
+                    <a href="services.html#logistics" class="service-link">Learn More →</a>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-tools"></i>
                     </div>
-                    <h3>Equipment & Site Services Rentals</h3>
-                    <p>We provide flexible rental solutions designed to support both short-term and long-term site operations.</p>
-                    <ul>
-                        <li>Mobile toilets and hygiene units</li>
-                        <li>Lighting plants for night and remote operations</li>
-                        <li>Generators and temporary power solutions</li>
-                        <li>Well-maintained and reliable equipment</li>
-                    </ul>
+                    <h3>Equipment Rentals</h3>
+                    <p>Flexible rental solutions including generators, lighting plants, and hygiene units.</p>
+                    <a href="services.html#rentals" class="service-link">Learn More →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
+    <!-- About Preview -->
+    <section class="about-preview">
         <div class="container">
-            <div class="section-title">
-                <h2>Company Overview</h2>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Sarah M Projects</h2>
-                    <p>Sarah M Projects is a South African–based supplies, logistics, and equipment rental company delivering reliable operational support to mining, construction, and industrial projects.</p>
-                    <p>Our company provides a wide range of essential site consumables, including compliant personal protective equipment (PPE), safety footwear, protective clothing, helmets, gloves, reflective wear, safety signage, and general site supplies, all aligned with industry safety and operational standards.</p>
-                    <p>We are committed to safety compliance, operational efficiency, and consistent service excellence for all our clients.</p>
-                </div>
-                <div class="markets-served">
-                    <h3>Markets Served</h3>
-                    <div class="markets-grid">
-                        <div class="market-item">
-                            <div class="market-icon">
-                                <i class="fas fa-mountain"></i>
-                            </div>
-                            <h4>Mining Operations</h4>
+            <div class="about-preview-content">
+                <div class="about-preview-text">
+                    <h2>Trusted Partner Since 2026</h2>
+                    <p>Sarah M Projects delivers reliable operational support to mining, construction, and industrial projects across South Africa. Our commitment to safety, quality, and timely delivery makes us the preferred partner for major projects nationwide.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>Professional</h3>
+                            <p>Service Excellence</p>
                         </div>
-                        <div class="market-item">
-                            <div class="market-icon">
-                                <i class="fas fa-tools"></i>
-                            </div>
-                            <h4>Construction Projects</h4>
+                        <div class="stat-item">
+                            <h3>Reliable</h3>
+                            <p>On-Time Delivery</p>
                         </div>
-                        <div class="market-item">
-                            <div class="market-icon">
-                                <i class="fas fa-industry"></i>
-                            </div>
-                            <h4>Industrial & Infrastructure Developments</h4>
+                        <div class="stat-item">
+                            <h3>100%</h3>
+                            <p>Safety Compliance</p>
                         </div>
                     </div>
+                    <a href="about.html" class="btn">Our Story</a>
                 </div>
+                <!-- Removed the Industrial Excellence placeholder block -->
             </div>
         </div>
     </section>
 
-    <!-- Commitment Section -->
-    <section class="commitment" id="commitment">
+    <!-- CTA Section -->
+    <section class="cta">
         <div class="container">
-            <div class="section-title">
-                <h2>Our Commitment</h2>
-            </div>
-            <div class="commitment-content">
-                <p>Sarah M Projects is committed to delivering dependable, high-quality services in accordance with applicable safety, regulatory, and operational standards. The company adopts a structured and professional approach to service delivery, working in close collaboration with clients to fully understand project requirements and operational objectives.</p>
-                <p>Through the provision of reliable supply solutions, efficient logistics, and well-maintained rental equipment, Sarah M Projects supports operational continuity, risk mitigation, and cost efficiency.</p>
-                <p>The company remains focused on consistent performance, compliance, and the development of long-term, mutually beneficial client partnerships within the mining, construction, and industrial sectors.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact Us</h2>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <p>Contact Sarah M Projects for reliable supplies, logistics, and equipment rental solutions tailored to your project needs.</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <h4>Location</h4>
-                                <p>South Africa</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <h4>Email</h4>
-                                <p>info@sarahnprojects.co.za</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div>
-                                <h4>Phone</h4>
-                                <p>067 403 1185</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <h3>Send a Message</h3>
-                    <form id="contactForm">
-                        <div style="margin-bottom: 1rem;">
-                            <input type="text" placeholder="Your Name" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; font-size: 1rem;" required>
-                        </div>
-                        <div style="margin-bottom: 1rem;">
-                            <input type="email" placeholder="Your Email" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; font-size: 1rem;" required>
-                        </div>
-                        <div style="margin-bottom: 1rem;">
-                            <input type="text" placeholder="Subject" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; font-size: 1rem;" required>
-                        </div>
-                        <div style="margin-bottom: 1rem;">
-                            <textarea placeholder="Your Message" rows="5" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; font-size: 1rem;" required></textarea>
-                        </div>
-                        <button type="submit" class="btn" style="width: 100%;">Send Message</button>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="developer-contact">
-                <h3>For Software Development Opportunities</h3>
-                <p>If you're looking for a motivated junior software developer or data analyst who is eager to learn and contribute, I'd love to connect.</p>
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>ntokozomaboa0209@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h4>Alternative Email</h4>
-                            <p>ntokozomaboa9@icloud.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>067 403 1185</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <h2>Ready to Start Your Next Project?</h2>
+            <p>Get in touch with our team for a customized quote and consultation.</p>
+            <a href="contact.html" class="btn">Contact Us Today</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Sarah M Projects Logo" class="footer-logo-img">
+                    </div>
                     <h3>Sarah M Projects</h3>
-                    <p>Supplies, Logistics & Equipment Rentals</p>
+                    <p>Supplies, Logistics & Equipment Rentals for mining, construction, and industrial projects.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
                 </div>
-                <div class="footer-nav">
-                    <p>Safety Compliance | Operational Efficiency | Service Excellence</p>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
                 </div>
-                <div class="copyright">
-                    <p>&copy; 2026 Sarah M Projects. All rights reserved.</p>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#supplies">Industrial Supplies</a></li>
+                        <li><a href="services.html#logistics">Logistics Services</a></li>
+                        <li><a href="services.html#rentals">Equipment Rentals</a></li>
+                    </ul>
                 </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> South Africa</p>
+                        <p><i class="fas fa-phone"></i> 067 403 1185</p>
+                        <p><i class="fas fa-envelope"></i> ntokozomaboa0209@gmail.com</p>
+                        <p><i class="fas fa-envelope"></i> ntokozomaboa9@icloud.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Sarah M Projects. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navMenu = document.getElementById('navMenu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('show');
-        });
-        
-        // Close mobile menu when clicking on a link
-        const navLinks = document.querySelectorAll('#navMenu a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('show');
-            });
-        });
-        
-        // Contact form submission
-        const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Get form values
-            const name = contactForm.querySelector('input[type="text"]').value;
-            const email = contactForm.querySelector('input[type="email"]').value;
-            const subject = contactForm.querySelectorAll('input[type="text"]')[1].value;
-            const message = contactForm.querySelector('textarea').value;
-            
-            // In a real application, you would send this data to a server
-            // For now, we'll just show a success message
-            alert(`Thank you ${name}! Your message has been sent successfully. We will contact you at ${email} soon.`);
-            
-            // Reset form
-            contactForm.reset();
-        });
-        
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // Add active class to current navigation item
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('#navMenu a');
-            
-            let current = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if(scrollY >= (sectionTop - 100)) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if(link.getAttribute('href').substring(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-        
-        // Add click-to-call functionality for phone numbers
-        const phoneNumbers = document.querySelectorAll('.contact-item h4 + p');
-        phoneNumbers.forEach(phone => {
-            if(phone.textContent.includes('067')) {
-                phone.style.cursor = 'pointer';
-                phone.style.textDecoration = 'underline';
-                phone.title = 'Click to call';
-                phone.addEventListener('click', () => {
-                    const phoneNumber = phone.textContent.replace(/\s/g, '');
-                    window.location.href = `tel:${phoneNumber}`;
-                });
-            }
-        });
-        
-        // Add click-to-email functionality for email addresses
-        const emailAddresses = document.querySelectorAll('.contact-item h4 + p');
-        emailAddresses.forEach(email => {
-            if(email.textContent.includes('@')) {
-                email.style.cursor = 'pointer';
-                email.style.textDecoration = 'underline';
-                email.title = 'Click to send email';
-                email.addEventListener('click', () => {
-                    window.location.href = `mailto:${email.textContent}`;
-                });
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
