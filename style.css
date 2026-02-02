@@ -74,7 +74,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 10px 20px; /* Reduced padding to accommodate larger logo */
 }
 
 .logo a {
@@ -84,24 +84,32 @@ header {
     color: #000000;
 }
 
+/* BIGGER LOGO - Increased from 80px to 120px */
 .logo-image {
-    height: 60px;
+    height: 120px;        /* SIGNIFICANTLY BIGGER LOGO */
     width: auto;
-    margin-right: 15px;
+    margin-right: 20px;   /* Increased margin for better spacing */
     border-radius: 4px;
     object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+    transform: scale(1.02);
 }
 
 .logo-text h1 {
-    font-size: 1.5rem;
-    margin-bottom: 2px;
+    font-size: 1.8rem;    /* Increased from 1.5rem */
+    margin-bottom: 5px;   /* Increased from 2px */
     color: #000000;
+    font-weight: 700;
 }
 
 .logo-text span {
-    font-size: 0.9rem;
+    font-size: 1rem;      /* Increased from 0.9rem */
     color: #666;
     font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 .mobile-menu-btn {
@@ -111,6 +119,7 @@ header {
     font-size: 1.5rem;
     color: #000000;
     cursor: pointer;
+    padding: 10px;
 }
 
 nav ul {
@@ -123,9 +132,10 @@ nav a {
     text-decoration: none;
     color: #333;
     font-weight: 600;
-    padding: 5px 0;
+    padding: 8px 0;
     position: relative;
     transition: color 0.3s ease;
+    font-size: 1.05rem;
 }
 
 nav a:hover, nav a.active {
@@ -142,7 +152,7 @@ nav a.active::after {
     background-color: #000000;
 }
 
-/* Hero Section */
+/* Hero Section - Adjusted margin-top to accommodate larger logo */
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
     background-size: cover;
@@ -150,7 +160,7 @@ nav a.active::after {
     color: white;
     text-align: center;
     padding: 180px 20px 100px;
-    margin-top: 80px;
+    margin-top: 140px; /* Increased from 80px to account for larger header */
 }
 
 .hero h1 {
@@ -254,27 +264,22 @@ nav a.active::after {
     padding: 80px 20px;
     background-color: #f5f5f5;
     border-bottom: 1px solid #e0e0e0;
+    text-align: center;
 }
 
-.about-preview-content {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.about-preview-text {
-    flex: 1;
-}
-
-.about-preview-text h2 {
+.about-preview h2 {
     font-size: 2rem;
     color: #000000;
     margin-bottom: 20px;
 }
 
-.about-preview-text p {
+.about-preview p {
     margin-bottom: 25px;
     color: #666;
     line-height: 1.8;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .stats {
@@ -282,23 +287,28 @@ nav a.active::after {
     gap: 30px;
     margin: 30px 0;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .stat-item {
     text-align: center;
     flex: 1;
     min-width: 150px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
 }
 
 .stat-item h3 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #000000;
     margin-bottom: 5px;
 }
 
 .stat-item p {
     color: #666;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     margin: 0;
 }
 
@@ -332,7 +342,7 @@ nav a.active::after {
     color: white;
     text-align: center;
     padding: 150px 20px 80px;
-    margin-top: 80px;
+    margin-top: 140px; /* Increased from 80px */
 }
 
 .page-banner h1 {
@@ -357,7 +367,7 @@ nav a.active::after {
     padding: 20px 0;
     border-bottom: 1px solid #e0e0e0;
     position: sticky;
-    top: 80px;
+    top: 140px; /* Increased from 80px */
     z-index: 999;
 }
 
@@ -913,7 +923,7 @@ footer {
 }
 
 .footer-logo-img {
-    height: 40px;
+    height: 60px; /* Increased from 40px to match larger logo */
     width: auto;
     margin-bottom: 15px;
     border-radius: 4px;
@@ -1017,23 +1027,42 @@ footer {
         display: flex;
     }
     
+    /* Mobile adjustments for larger logo */
+    .header-container {
+        padding: 15px 20px;
+    }
+    
     .logo a {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
     }
     
     .logo-image {
-        height: 50px;
-        margin-right: 0;
-        margin-bottom: 10px;
+        height: 80px; /* Slightly smaller for mobile but still larger than before */
+        margin-right: 15px;
+        margin-bottom: 0;
     }
     
     .logo-text h1 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     
     .logo-text span {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .hero {
+        margin-top: 160px; /* Adjusted for mobile */
+        padding: 120px 20px 60px;
+    }
+    
+    .page-banner {
+        margin-top: 160px;
+        padding: 120px 20px 60px;
+    }
+    
+    .services-nav {
+        top: 160px;
     }
     
     .hero h1 {
@@ -1080,16 +1109,37 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .logo a {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .logo-image {
+        height: 70px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
     .logo-text h1 {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
     
     .logo-text span {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
     }
     
     .hero {
-        padding: 150px 20px 80px;
+        margin-top: 180px; /* Further adjusted for very small screens */
+        padding: 100px 20px 50px;
+    }
+    
+    .page-banner {
+        margin-top: 180px;
+        padding: 100px 20px 50px;
+    }
+    
+    .services-nav {
+        top: 180px;
     }
     
     .btn {
@@ -1106,6 +1156,10 @@ footer {
     }
     
     .footer-logo-img {
-        height: 35px;
+        height: 50px;
+    }
+    
+    .stat-item {
+        min-width: 100%;
     }
 }
