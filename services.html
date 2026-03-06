@@ -472,11 +472,13 @@
 
     <script src="script.js"></script>
     <script>
+        // Hide the services navigation when scrolling down
         document.addEventListener('DOMContentLoaded', function() {
             const servicesNav = document.getElementById('servicesNav');
             const pageBanner = document.querySelector('.page-banner');
             
             if (servicesNav && pageBanner) {
+                // Get the bottom position of the page banner
                 const bannerBottom = pageBanner.offsetTop + pageBanner.offsetHeight;
                 
                 window.addEventListener('scroll', function() {
