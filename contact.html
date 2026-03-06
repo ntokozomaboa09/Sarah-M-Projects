@@ -2,12 +2,326 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Contact Us | Sarah M Projects</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
+        /* Mobile-specific fixes for contact page */
+        @media (max-width: 768px) {
+            .contact-page {
+                padding: 40px 15px;
+                overflow-x: hidden;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .contact-info-section h2 {
+                font-size: 1.6rem;
+                margin-bottom: 15px;
+            }
+            
+            .contact-info-section p {
+                font-size: 0.95rem;
+                line-height: 1.5;
+                word-wrap: break-word;
+            }
+            
+            .contact-detail-item {
+                flex-direction: column;
+                gap: 10px;
+                padding: 15px;
+                margin-bottom: 15px;
+                border: 1px solid #e0e0e0;
+                border-radius: 8px;
+                background-color: #f9f9f9;
+            }
+            
+            .detail-icon {
+                width: 100%;
+                text-align: left;
+                font-size: 1.3rem;
+            }
+            
+            .detail-content {
+                width: 100%;
+            }
+            
+            .detail-content h3 {
+                font-size: 1.1rem;
+                margin-bottom: 5px;
+            }
+            
+            .detail-content p {
+                font-size: 1rem;
+                margin-bottom: 5px;
+                word-break: break-word;
+            }
+            
+            .detail-content p a {
+                word-break: break-all;
+                display: inline-block;
+                max-width: 100%;
+            }
+            
+            .detail-content small {
+                font-size: 0.85rem;
+                display: block;
+                margin-top: 5px;
+            }
+            
+            .emergency-contact {
+                padding: 20px;
+                margin-top: 20px;
+                word-wrap: break-word;
+            }
+            
+            .emergency-contact h3 {
+                font-size: 1.2rem;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+            
+            .emergency-contact p {
+                font-size: 0.95rem;
+                margin-bottom: 10px;
+                word-break: break-word;
+            }
+            
+            .emergency-contact strong {
+                font-size: 1.1rem;
+                display: inline-block;
+                width: 100%;
+                margin-top: 5px;
+            }
+            
+            .emergency-contact strong a {
+                word-break: break-all;
+            }
+            
+            .whatsapp-message {
+                font-size: 0.85rem;
+                background-color: #e8f5e8;
+                padding: 10px;
+                border-radius: 4px;
+                margin-top: 8px;
+                border-left: 3px solid #25D366;
+                word-wrap: break-word;
+            }
+            
+            .contact-form-section {
+                padding: 20px;
+                background-color: white;
+                border-radius: 8px;
+                border: 1px solid #e0e0e0;
+            }
+            
+            .contact-form-section h2 {
+                font-size: 1.6rem;
+                margin-bottom: 10px;
+            }
+            
+            .form-group {
+                margin-bottom: 15px;
+            }
+            
+            .form-group label {
+                font-size: 0.95rem;
+                margin-bottom: 5px;
+            }
+            
+            .form-group input, 
+            .form-group select, 
+            .form-group textarea {
+                padding: 12px;
+                font-size: 16px; /* Prevents zoom on iOS */
+                width: 100%;
+                box-sizing: border-box;
+            }
+            
+            .form-row {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            
+            .form-row input[type="checkbox"] {
+                width: auto;
+                min-width: 20px;
+            }
+            
+            .form-row label {
+                flex: 1;
+                font-size: 0.9rem;
+            }
+            
+            .btn-block {
+                width: 100%;
+                padding: 14px;
+                font-size: 1rem;
+            }
+            
+            .location-section {
+                padding: 30px 15px;
+                margin-top: 30px;
+            }
+            
+            .location-section h2 {
+                font-size: 1.6rem;
+                margin-bottom: 15px;
+            }
+            
+            .location-section p {
+                font-size: 0.95rem;
+                margin-bottom: 20px;
+                word-wrap: break-word;
+            }
+            
+            .service-areas {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .area-card {
+                padding: 20px;
+            }
+            
+            .area-card h3 {
+                font-size: 1.1rem;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                flex-wrap: wrap;
+            }
+            
+            .area-card p {
+                font-size: 0.9rem;
+                margin-top: 8px;
+                word-wrap: break-word;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .footer-col {
+                text-align: left;
+                padding: 0 10px;
+            }
+            
+            .footer-col h3, .footer-col h4 {
+                margin-bottom: 15px;
+            }
+            
+            .contact-info p {
+                font-size: 0.95rem;
+                word-break: break-word;
+            }
+            
+            .contact-info p i {
+                width: 25px;
+            }
+            
+            .social-links {
+                justify-content: flex-start;
+            }
+            
+            .copyright p {
+                font-size: 0.85rem;
+                word-wrap: break-word;
+                padding: 0 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .contact-page {
+                padding: 30px 12px;
+            }
+            
+            .contact-info-section h2 {
+                font-size: 1.4rem;
+            }
+            
+            .detail-content p {
+                font-size: 0.95rem;
+            }
+            
+            .detail-content p a {
+                font-size: 0.9rem;
+            }
+            
+            .emergency-contact h3 {
+                font-size: 1.1rem;
+            }
+            
+            .emergency-contact strong {
+                font-size: 1rem;
+            }
+            
+            .contact-form-section h2 {
+                font-size: 1.4rem;
+            }
+            
+            .form-group input, 
+            .form-group select, 
+            .form-group textarea {
+                font-size: 16px;
+            }
+            
+            .location-section h2 {
+                font-size: 1.4rem;
+            }
+            
+            .area-card h3 {
+                font-size: 1rem;
+            }
+            
+            .whatsapp-link {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
+            
+            /* Fix for very small screens */
+            .contact-detail-item {
+                padding: 12px;
+            }
+            
+            .detail-content small {
+                font-size: 0.8rem;
+            }
+            
+            .whatsapp-message {
+                font-size: 0.8rem;
+                padding: 8px;
+            }
+            
+            .footer-col p {
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* General fixes for all mobile devices */
+        .contact-info-section a {
+            word-break: break-all;
+            display: inline-block;
+            max-width: 100%;
+        }
+        
+        .emergency-contact a {
+            word-break: break-all;
+        }
+        
+        .footer-col a {
+            word-break: break-all;
+        }
+        
         /* WhatsApp button styling */
         .whatsapp-link {
             display: inline-flex;
@@ -36,23 +350,18 @@
             margin-top: 20px;
         }
         
-        .social-links a {
+        .social-links a.whatsapp {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             width: 50px;
             height: 50px;
-            background-color: #f0f0f0;
+            background-color: #25D366;
             border-radius: 50%;
-            color: #333;
+            color: white;
             font-size: 1.5rem;
             transition: all 0.3s ease;
             text-decoration: none;
-        }
-        
-        .social-links a.whatsapp {
-            background-color: #25D366;
-            color: white;
         }
         
         .social-links a.whatsapp:hover {
@@ -61,12 +370,15 @@
             box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
         }
         
-        /* Pre-filled message styling */
         .whatsapp-message {
             font-size: 0.9rem;
             color: #666;
             margin-top: 5px;
             font-style: italic;
+            background-color: #f0f9f0;
+            padding: 8px;
+            border-radius: 4px;
+            border-left: 3px solid #25D366;
         }
     </style>
 </head>
@@ -97,7 +409,7 @@
         </div>
     </header>
 
-    <!-- Page Banner - Updated with same image as home page hero -->
+    <!-- Page Banner -->
     <section class="page-banner contact-banner">
         <div class="container">
             <h1>Contact Us</h1>
@@ -166,6 +478,7 @@
                         <p>For urgent equipment or supply needs outside business hours:</p>
                         <p><strong><a href="tel:0674031185">067 403 1185</a></strong></p>
                         <p><strong><a href="https://wa.me/27674031185?text=I%20have%20an%20urgent%20emergency%20regarding%20equipment%2Fsupplies%20for%20my%20project.%20Please%20assist%20urgently." target="_blank" class="whatsapp-link"><i class="fab fa-whatsapp"></i></a></strong> <span class="whatsapp-message">Emergency WhatsApp</span></p>
+                        <p><small>Website: rahmprojects.co.za</small></p>
                     </div>
                 </div>
                 
@@ -273,7 +586,6 @@
                     <h3>Sarah M Projects</h3>
                     <p>Supplies, Logistics & Equipment Rentals for mining, construction, and industrial projects.</p>
                     <div class="social-links">
-                        <!-- WhatsApp only - LinkedIn, Facebook, Twitter removed -->
                         <a href="https://wa.me/27674031185?text=I%20am%20writing%20to%20express%20my%20interest%20in%20exploring%20potential%20business%20opportunities%20with%20Sarah%20M%20Projects.%20Could%20you%20please%20provide%20more%20information%20about%20your%20services%20and%20products%3F" class="whatsapp" target="_blank" title="Chat with us on WhatsApp">
                             <i class="fab fa-whatsapp"></i>
                         </a>
@@ -307,7 +619,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; <span id="currentYear">2026</span> Sarah M Projects. All rights reserved.</p>
+                <p>&copy; <span id="currentYear">2026</span> Sarah M Projects. All rights reserved. | <a href="https://rahmprojects.co.za" target="_blank">rahmprojects.co.za</a></p>
             </div>
         </div>
     </footer>
