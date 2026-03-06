@@ -7,6 +7,68 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        /* WhatsApp button styling */
+        .whatsapp-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: #25D366;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            margin-top: 15px;
+        }
+        
+        .whatsapp-link:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: #f0f0f0;
+            border-radius: 50%;
+            color: #333;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-links a.whatsapp {
+            background-color: #25D366;
+            color: white;
+        }
+        
+        .social-links a.whatsapp:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        }
+        
+        /* Pre-filled message styling */
+        .whatsapp-message {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+            font-style: italic;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -85,12 +147,25 @@
                                 <small>Primary contact email</small>
                             </div>
                         </div>
+                        
+                        <div class="contact-detail-item">
+                            <div class="detail-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h3>WhatsApp</h3>
+                                <p><a href="https://wa.me/27674031185?text=I%20am%20writing%20to%20express%20my%20interest%20in%20exploring%20potential%20business%20opportunities%20with%20Sarah%20M%20Projects.%20Could%20you%20please%20provide%20more%20information%20about%20your%20services%20and%20products%3F" target="_blank">067 403 1185</a></p>
+                                <small>Click to chat on WhatsApp</small>
+                                <div class="whatsapp-message">Pre-filled message: "I am writing to express my interest in exploring potential business opportunities with Sarah M Projects..."</div>
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="emergency-contact">
                         <h3><i class="fas fa-exclamation-triangle"></i> Emergency After-Hours</h3>
                         <p>For urgent equipment or supply needs outside business hours:</p>
                         <p><strong><a href="tel:0674031185">067 403 1185</a></strong></p>
+                        <p><strong><a href="https://wa.me/27674031185?text=I%20have%20an%20urgent%20emergency%20regarding%20equipment%2Fsupplies%20for%20my%20project.%20Please%20assist%20urgently." target="_blank" class="whatsapp-link"><i class="fab fa-whatsapp"></i></a></strong> <span class="whatsapp-message">Emergency WhatsApp</span></p>
                     </div>
                 </div>
                 
@@ -198,9 +273,10 @@
                     <h3>Sarah M Projects</h3>
                     <p>Supplies, Logistics & Equipment Rentals for mining, construction, and industrial projects.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <!-- WhatsApp only - LinkedIn, Facebook, Twitter removed -->
+                        <a href="https://wa.me/27674031185?text=I%20am%20writing%20to%20express%20my%20interest%20in%20exploring%20potential%20business%20opportunities%20with%20Sarah%20M%20Projects.%20Could%20you%20please%20provide%20more%20information%20about%20your%20services%20and%20products%3F" class="whatsapp" target="_blank" title="Chat with us on WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -226,6 +302,7 @@
                         <p><i class="fas fa-map-marker-alt"></i> South Africa</p>
                         <p><i class="fas fa-phone"></i> 067 403 1185</p>
                         <p><i class="fas fa-envelope"></i> sarahmprojects.inquiries@gmail.com</p>
+                        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/27674031185?text=I%20am%20writing%20to%20express%20my%20interest%20in%20exploring%20potential%20business%20opportunities%20with%20Sarah%20M%20Projects.%20Could%20you%20please%20provide%20more%20information%20about%20your%20services%20and%20products%3F" target="_blank">WhatsApp Chat</a></p>
                     </div>
                 </div>
             </div>
