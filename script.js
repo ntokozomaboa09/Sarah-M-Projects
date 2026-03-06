@@ -1,4 +1,3 @@
-// Mobile Menu Toggle
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const navMenu = document.getElementById('navMenu');
 
@@ -10,7 +9,6 @@ if (mobileMenuBtn && navMenu) {
             : '<i class="fas fa-bars"></i>';
     });
     
-    // Close mobile menu when clicking on a link
     const navLinks = document.querySelectorAll('#navMenu a');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -19,7 +17,6 @@ if (mobileMenuBtn && navMenu) {
         });
     });
     
-    // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!navMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
             navMenu.classList.remove('show');
@@ -28,7 +25,6 @@ if (mobileMenuBtn && navMenu) {
     });
 }
 
-// Services Navigation
 const serviceNavLinks = document.querySelectorAll('.nav-link');
 serviceNavLinks.forEach(link => {
     link.addEventListener('click', function(e) {
@@ -37,11 +33,9 @@ serviceNavLinks.forEach(link => {
         const targetElement = document.getElementById(targetId);
         
         if (targetElement) {
-            // Update active class
             serviceNavLinks.forEach(l => l.classList.remove('active'));
             this.classList.add('active');
             
-            // Scroll to section
             window.scrollTo({
                 top: targetElement.offsetTop - 100,
                 behavior: 'smooth'
@@ -50,7 +44,6 @@ serviceNavLinks.forEach(link => {
     });
 });
 
-// Contact Form Handling
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', async function(e) {
@@ -60,7 +53,6 @@ if (contactForm) {
         const submitButton = this.querySelector('button[type="submit"]');
         const formMessage = document.getElementById('formMessage');
         
-        // Disable submit button and show loading
         submitButton.disabled = true;
         submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         
@@ -74,29 +66,23 @@ if (contactForm) {
             });
             
             if (response.ok) {
-                // Success
                 formMessage.textContent = 'Thank you! Your message has been sent successfully. We will get back to you soon.';
                 formMessage.className = 'form-message success';
                 contactForm.reset();
             } else {
-                // Error
                 const errorData = await response.json();
                 formMessage.textContent = errorData.error || 'There was an error sending your message. Please try again or contact us directly at 067 403 1185.';
                 formMessage.className = 'form-message error';
             }
         } catch (error) {
-            // Network error
             formMessage.textContent = 'Network error. Please check your connection and try again, or contact us directly at 067 403 1185.';
             formMessage.className = 'form-message error';
         } finally {
-            // Re-enable submit button
             submitButton.disabled = false;
             submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
             
-            // Show message
             formMessage.style.display = 'block';
             
-            // Hide message after 10 seconds
             setTimeout(() => {
                 formMessage.style.display = 'none';
             }, 10000);
@@ -104,7 +90,6 @@ if (contactForm) {
     });
 }
 
-// Smooth Scrolling for Anchor Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
@@ -122,7 +107,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth'
             });
             
-            // Update active class for service nav links
             if (href.includes('#')) {
                 const serviceLinks = document.querySelectorAll('.nav-link');
                 serviceLinks.forEach(link => link.classList.remove('active'));
@@ -132,9 +116,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Active Navigation Highlighting on Scroll
 const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('#navMenu a');
+const navLinksArray = document.querySelectorAll('#navMenu a');
 
 function updateActiveNav() {
     let current = '';
@@ -148,21 +131,18 @@ function updateActiveNav() {
         }
     });
     
-    navLinks.forEach(link => {
+    navLinksArray.forEach(link => {
         link.classList.remove('active');
         const href = link.getAttribute('href');
         
-        // Check if this link corresponds to the current section
         if (href === `#${current}` || (current === '' && href === 'index.html')) {
             link.classList.add('active');
         }
     });
 }
 
-// Update active nav on scroll
 window.addEventListener('scroll', updateActiveNav);
 
-// Form Validation Enhancement
 const formInputs = document.querySelectorAll('input, select, textarea');
 formInputs.forEach(input => {
     input.addEventListener('blur', function() {
@@ -178,21 +158,17 @@ formInputs.forEach(input => {
     });
 });
 
-// Initialize when page loads
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Sarah M Projects website loaded successfully');
     
-    // Set current year in footer
     const yearElements = document.querySelectorAll('#currentYear');
     yearElements.forEach(element => {
         const currentYear = new Date().getFullYear();
         element.textContent = currentYear;
     });
     
-    // Update active nav on page load
     updateActiveNav();
     
-    // Highlight current page in navigation
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('#navMenu a');
     navLinks.forEach(link => {
@@ -203,7 +179,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Phone Number Click Handler
 const phoneNumbers = document.querySelectorAll('a[href^="tel:"]');
 phoneNumbers.forEach(phone => {
     phone.addEventListener('click', function(e) {
@@ -211,7 +186,6 @@ phoneNumbers.forEach(phone => {
     });
 });
 
-// Email Click Handler
 const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
 emailLinks.forEach(email => {
     email.addEventListener('click', function(e) {
