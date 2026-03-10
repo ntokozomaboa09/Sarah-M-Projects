@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="google-site-verification" content="6tPPHuSCAd9Ot-m0XDj0sPAEpXNCADej4H2AqERUdjI" />
+    <title>Our Projects | Sarah M Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        /* Projects Page Specific Styles */
+        .projects-section {
+            padding: 80px 20px;
+            background-color: white;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .project-card {
+            background: #f9f9f9;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .project-icon {
+            background: linear-gradient(135deg, #000000, #333333);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            font-size: 3rem;
+        }
+        
+        .project-content {
+            padding: 25px;
+        }
+        
+        .project-content h3 {
+            font-size: 1.5rem;
+            color: #000000;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .project-content h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #000000;
+        }
+        
+        .project-content p {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .approach-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #f5f5f5, #ffffff);
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .approach-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .approach-container h2 {
+            font-size: 2.5rem;
+            color: #000000;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .approach-container h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #000000;
+        }
+        
+        .approach-container p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .approach-highlight {
+            background-color: #000000;
+            color: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            margin-top: 30px;
+            font-weight: 500;
+        }
+        
+        .approach-highlight i {
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .projects-section {
+                padding: 50px 15px;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-content h3 {
+                font-size: 1.3rem;
+            }
+            
+            .approach-container h2 {
+                font-size: 2rem;
+            }
+            
+            .approach-container p {
+                font-size: 1rem;
+            }
+            
+            .approach-highlight {
+                padding: 15px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container header-container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="Sarah M Projects Logo" class="logo-image" loading="eager">
+                <div class="logo-text">
+                    <h1>Sarah M Projects</h1>
+                    <span>Supplies, Logistics & Equipment Rentals</span>
+                </div>
+            </a>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <ul id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="page-banner">
+    <div class="container">
+        <h1>Our Projects</h1>
+        <p>Supporting mining, construction, and industrial operations with reliable operational services</p>
+    </div>
+</section>
+
+<section class="projects-section">
+    <div class="container">
+        <div class="projects-grid">
+            <!-- Mining Supply Delivery -->
+            <div class="project-card">
+                <div class="project-icon">
+                    <i class="fas fa-hard-hat"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Mining Supply Delivery</h3>
+                    <p>Supply of personal protective equipment (PPE), safety consumables, and site materials to support mining operations while ensuring compliance with industry safety standards.</p>
+                </div>
+            </div>
+            
+            <!-- Construction Logistics Support -->
+            <div class="project-card">
+                <div class="project-icon">
+                    <i class="fas fa-truck-moving"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Construction Logistics Support</h3>
+                    <p>Provision of reliable logistics services for the transportation and delivery of materials, tools, and equipment to construction sites, ensuring projects remain on schedule.</p>
+                </div>
+            </div>
+            
+            <!-- Equipment Rental Support -->
+            <div class="project-card">
+                <div class="project-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Equipment Rental Support</h3>
+                    <p>Supplying temporary equipment solutions including generators, lighting towers, and mobile sanitation units to support both short-term and long-term project requirements.</p>
+                </div>
+            </div>
+            
+            <!-- Site Operational Support -->
+            <div class="project-card">
+                <div class="project-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Site Operational Support</h3>
+                    <p>Providing essential operational support services including supply coordination, equipment rentals, and logistics management for industrial and infrastructure projects.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="approach-section">
+    <div class="container approach-container">
+        <h2>Our Approach</h2>
+        <p>At Sarah M Projects, every project is approached with a focus on safety, efficiency, and reliability. We work closely with our clients to ensure that supplies, logistics, and equipment are delivered on time and meet all operational requirements.</p>
+        <p>Our goal is to support project success by providing dependable services that minimize downtime and maintain safe working environments.</p>
+        <div class="approach-highlight">
+            <i class="fas fa-check-circle"></i> Safety First • Efficiency • Reliability • On-Time Delivery
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container footer-grid">
+        <div class="footer-col">
+            <img src="logo.png" alt="Sarah M Projects Logo" class="footer-logo-img" loading="lazy">
+            <p>Supplies, Logistics & Equipment Rentals</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+                <li><a href="services.html#supplies">Industrial Supplies</a></li>
+                <li><a href="services.html#logistics">Logistics Services</a></li>
+                <li><a href="services.html#rentals">Equipment Rentals</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <p><i class="fas fa-phone"></i> <a href="tel:0674031185">067 403 1185</a></p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:sarahmprojects.inquiries@gmail.com">sarahmprojects.inquiries@gmail.com</a></p>
+            <p><i class="fas fa-map-marker-alt"></i> South Africa</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2026 Sarah M Projects. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
