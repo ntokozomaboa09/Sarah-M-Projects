@@ -9,130 +9,112 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
-        /* Compliance Section Styling */
-        .compliance-section {
-            padding: 80px 20px;
-            background-color: #f9f9f9;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .compliance-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-        
-        .compliance-content h2 {
-            font-size: 2rem;
-            color: #000000;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 15px;
-        }
-        
-        .compliance-content h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 80px;
-            height: 3px;
-            background-color: #000000;
-        }
-        
-        .compliance-content p {
-            color: #666;
-            line-height: 1.8;
-            margin-bottom: 20px;
-            font-size: 1.05rem;
-        }
-        
-        .compliance-list {
-            list-style: none;
-            margin-top: 25px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-        
-        .compliance-list li {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #333;
-            font-weight: 500;
-            background: white;
-            padding: 12px 15px;
-            border-radius: 8px;
-            border: 1px solid #e0e0e0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .compliance-list li:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-color: #000000;
-        }
-        
-        .compliance-list li i {
-            color: #000000;
-            font-size: 1.2rem;
-        }
-        
-        .compliance-icon {
-            text-align: center;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            border: 1px solid #e0e0e0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-        
-        .compliance-icon i {
-            font-size: 5rem;
-            color: #000000;
-            margin-bottom: 20px;
-        }
-        
-        .compliance-icon h3 {
-            font-size: 1.5rem;
-            color: #000000;
-            margin-bottom: 10px;
-        }
-        
-        .compliance-icon p {
-            color: #666;
-            font-size: 1rem;
-        }
-        
-        @media (max-width: 992px) {
-            .compliance-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-            
-            .compliance-list {
-                grid-template-columns: 1fr;
-            }
-        }
-        
+        /* Additional mobile fixes for header */
         @media (max-width: 768px) {
-            .compliance-section {
-                padding: 50px 15px;
+            .header-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 15px;
+                flex-wrap: nowrap;
             }
             
-            .compliance-content h2 {
-                font-size: 1.8rem;
+            .logo a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: #000000;
+                flex-direction: row;
+                max-width: calc(100% - 60px);
             }
             
-            .compliance-content p {
+            .logo-image {
+                height: 60px;
+                width: auto;
+                margin-right: 10px;
+                margin-bottom: 0;
+                flex-shrink: 0;
+            }
+            
+            .logo-text {
+                flex: 1;
+                min-width: 0;
+            }
+            
+            .logo-text h1 {
+                font-size: 1.2rem;
+                margin-bottom: 2px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            
+            .logo-text span {
+                font-size: 0.75rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: block;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                padding: 8px;
+                font-size: 1.5rem;
+                flex-shrink: 0;
+                margin-left: 5px;
+            }
+            
+            nav ul {
+                top: 140px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header-container {
+                padding: 8px 12px;
+            }
+            
+            .logo a {
+                max-width: calc(100% - 50px);
+            }
+            
+            .logo-image {
+                height: 50px;
+                margin-right: 8px;
+            }
+            
+            .logo-text h1 {
                 font-size: 1rem;
             }
             
-            .compliance-list li {
-                padding: 10px 12px;
-                font-size: 0.95rem;
+            .logo-text span {
+                font-size: 0.7rem;
+            }
+            
+            .mobile-menu-btn {
+                padding: 6px;
+                font-size: 1.3rem;
+            }
+            
+            nav ul {
+                top: 130px;
+            }
+        }
+        
+        /* Fix for very small screens */
+        @media (max-width: 360px) {
+            .logo-image {
+                height: 45px;
+                margin-right: 5px;
+            }
+            
+            .logo-text h1 {
+                font-size: 0.9rem;
+            }
+            
+            .logo-text span {
+                font-size: 0.65rem;
             }
         }
     </style>
@@ -276,10 +258,19 @@
             </ul>
         </div>
         <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+                <li><a href="services.html#supplies">Industrial Supplies</a></li>
+                <li><a href="services.html#logistics">Logistics Services</a></li>
+                <li><a href="services.html#rentals">Equipment Rentals</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
             <h4>Contact</h4>
             <p><i class="fas fa-phone"></i> <a href="tel:0674031185">067 403 1185</a></p>
             <p><i class="fas fa-envelope"></i> <a href="mailto:sarahmprojects.inquiries@gmail.com">sarahmprojects.inquiries@gmail.com</a></p>
             <p><i class="fas fa-map-marker-alt"></i> South Africa</p>
+            <p><i class="fas fa-globe"></i> <a href="https://sarahmprojects.co.za" target="_blank">sarahmprojects.co.za</a></p>
         </div>
     </div>
     <div class="copyright">
