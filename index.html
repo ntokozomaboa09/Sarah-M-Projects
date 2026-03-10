@@ -3,10 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="google-site-verification" content="6tPPHuSCAd9Ot-m0XDj0sPAEpXNCADej4H2AqERUdjI" />
     <title>Sarah M Projects | Supplies, Logistics & Equipment Rentals</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        /* Compliance Section Styling */
+        .compliance-section {
+            padding: 80px 20px;
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .compliance-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .compliance-content h2 {
+            font-size: 2rem;
+            color: #000000;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .compliance-content h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background-color: #000000;
+        }
+        
+        .compliance-content p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+        
+        .compliance-list {
+            list-style: none;
+            margin-top: 25px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .compliance-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #333;
+            font-weight: 500;
+            background: white;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .compliance-list li:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-color: #000000;
+        }
+        
+        .compliance-list li i {
+            color: #000000;
+            font-size: 1.2rem;
+        }
+        
+        .compliance-icon {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        
+        .compliance-icon i {
+            font-size: 5rem;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+        
+        .compliance-icon h3 {
+            font-size: 1.5rem;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+        
+        .compliance-icon p {
+            color: #666;
+            font-size: 1rem;
+        }
+        
+        @media (max-width: 992px) {
+            .compliance-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .compliance-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .compliance-section {
+                padding: 50px 15px;
+            }
+            
+            .compliance-content h2 {
+                font-size: 1.8rem;
+            }
+            
+            .compliance-content p {
+                font-size: 1rem;
+            }
+            
+            .compliance-list li {
+                padding: 10px 12px;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -84,6 +213,39 @@
             <div class="stat-item"><h3>100%</h3><p>Safety Compliance</p></div>
         </div>
         <a href="about.html" class="btn">Our Story</a>
+    </div>
+</section>
+
+<!-- Professional Compliance Section -->
+<section class="compliance-section">
+    <div class="container">
+        <div class="compliance-grid">
+            <div class="compliance-content">
+                <h2>Compliance & Registration</h2>
+                <p>Sarah M Projects is a privately owned South African company committed to operating in full compliance with national regulatory and industry standards. The company is officially registered with the Companies and Intellectual Property Commission (CIPC) and adheres to all applicable business and safety regulations governing operations within South Africa.</p>
+                <p>We maintain strict compliance to ensure reliability, accountability, and safety across all projects we support.</p>
+                
+                <ul class="compliance-list">
+                    <li><i class="fas fa-check-circle"></i> CIPC Registered Private Company (Pty) Ltd</li>
+                    <li><i class="fas fa-check-circle"></i> Tax Compliant with the South African Revenue Service</li>
+                    <li><i class="fas fa-check-circle"></i> B-BBEE Compliant</li>
+                    <li><i class="fas fa-check-circle"></i> Health & Safety Regulation Compliance</li>
+                    <li><i class="fas fa-check-circle"></i> Commitment to Industry Best Practices</li>
+                </ul>
+                
+                <p style="margin-top: 20px; font-style: italic; color: #333; border-left: 3px solid #000; padding-left: 20px;">Through our compliance and governance standards, Sarah M Projects ensures that all operations are conducted responsibly while supporting the safety and efficiency of mining, construction, and industrial environments.</p>
+            </div>
+            <div class="compliance-icon">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Fully Compliant</h3>
+                <p>Registered • Tax Compliant • B-BBEE • Health & Safety</p>
+                <div style="margin-top: 20px; display: flex; justify-content: center; gap: 15px;">
+                    <span style="background: #000; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem;">CIPC</span>
+                    <span style="background: #000; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem;">SARS</span>
+                    <span style="background: #000; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem;">B-BBEE</span>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
