@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
-        /* Desktop-optimized styles */
+        /* Global Styles */
         * {
             margin: 0;
             padding: 0;
@@ -32,6 +32,36 @@
             padding: 0 20px;
         }
 
+        .btn {
+            display: inline-block;
+            background-color: #000000;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid #000000;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #333333;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: #000000;
+        }
+
+        .btn-outline:hover {
+            background-color: #000000;
+            color: white;
+        }
+
         /* Header Styles */
         header {
             background-color: white;
@@ -50,7 +80,6 @@
             padding: 15px 20px;
             max-width: 1400px;
             margin: 0 auto;
-            flex-wrap: wrap;
         }
 
         .logo a {
@@ -74,14 +103,12 @@
             margin-bottom: 5px;
             color: #000000;
             font-weight: 700;
-            white-space: nowrap;
         }
 
         .logo-text span {
             font-size: 1rem;
             color: #666;
             font-weight: 500;
-            white-space: nowrap;
         }
 
         .mobile-menu-btn {
@@ -109,7 +136,6 @@
             position: relative;
             transition: color 0.3s ease;
             font-size: 1.1rem;
-            white-space: nowrap;
         }
 
         nav a:hover, nav a.active {
@@ -126,7 +152,7 @@
             background-color: #000000;
         }
 
-        /* Hero Section - Mobile Optimized */
+        /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
@@ -135,13 +161,6 @@
             padding: 180px 20px 120px;
             margin-top: 130px;
             text-align: center;
-            width: 100%;
-            overflow-x: hidden;
-        }
-
-        .hero .container {
-            max-width: 1000px;
-            padding: 0 15px;
         }
 
         .hero h1 {
@@ -152,20 +171,15 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             word-wrap: break-word;
-            overflow-wrap: break-word;
-            hyphens: auto;
         }
 
         .hero p {
             font-size: 1.3rem;
             margin-bottom: 35px;
-            opacity: 0.95;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
             line-height: 1.7;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
         }
 
         .hero-buttons {
@@ -175,105 +189,7 @@
             flex-wrap: wrap;
         }
 
-        .hero-buttons .btn {
-            padding: 15px 40px;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            white-space: nowrap;
-        }
-
-        /* Mobile Responsive Hero */
-        @media (max-width: 992px) {
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-            
-            .hero p {
-                font-size: 1.2rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                padding: 150px 15px 100px;
-                margin-top: 120px;
-            }
-            
-            .hero h1 {
-                font-size: 2.2rem;
-                line-height: 1.4;
-                letter-spacing: 1px;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-                line-height: 1.6;
-                padding: 0 5px;
-            }
-            
-            .hero-buttons .btn {
-                padding: 12px 30px;
-                font-size: 1rem;
-                white-space: normal;
-                width: 100%;
-                max-width: 300px;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .hero {
-                padding: 130px 12px 80px;
-                margin-top: 110px;
-            }
-            
-            .hero h1 {
-                font-size: 1.8rem;
-                letter-spacing: 0.5px;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-                line-height: 1.5;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero {
-                padding: 120px 10px 70px;
-                margin-top: 100px;
-            }
-            
-            .hero h1 {
-                font-size: 1.5rem;
-            }
-            
-            .hero p {
-                font-size: 0.95rem;
-            }
-            
-            .hero-buttons {
-                gap: 10px;
-            }
-            
-            .hero-buttons .btn {
-                padding: 10px 20px;
-                font-size: 0.9rem;
-                max-width: 250px;
-            }
-        }
-
-        @media (max-width: 360px) {
-            .hero h1 {
-                font-size: 1.3rem;
-            }
-            
-            .hero p {
-                font-size: 0.9rem;
-            }
-        }
-
-        /* Rest of your existing styles remain the same */
+        /* Services Preview */
         .services-preview {
             padding: 100px 20px;
             background-color: white;
@@ -347,22 +263,14 @@
         .service-card p {
             color: #666;
             margin-bottom: 25px;
-            line-height: 1.7;
         }
 
         .service-link {
             color: #000000;
             text-decoration: none;
             font-weight: 600;
-            display: inline-block;
             border-bottom: 2px solid #000000;
             padding-bottom: 2px;
-            transition: all 0.3s ease;
-        }
-
-        .service-link:hover {
-            color: #333;
-            border-bottom-color: #333;
         }
 
         /* About Preview */
@@ -380,12 +288,11 @@
 
         .about-preview > p {
             margin-bottom: 40px;
-            color: #666;
-            line-height: 1.8;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
             font-size: 1.2rem;
+            color: #666;
         }
 
         .stats {
@@ -403,7 +310,6 @@
             background: white;
             border-radius: 12px;
             border: 1px solid #e0e0e0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
         .stat-item h3 {
@@ -414,23 +320,25 @@
 
         .stat-item p {
             color: #666;
-            font-size: 1rem;
-            margin: 0;
         }
 
-        /* Compliance Section */
+        /* Compliance Section - FIXED */
         .compliance-section {
             padding: 100px 20px;
             background-color: white;
+            width: 100%;
         }
 
         .compliance-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
-            align-items: center;
             max-width: 1100px;
             margin: 0 auto;
+        }
+
+        .compliance-content {
+            width: 100%;
         }
 
         .compliance-content h2 {
@@ -452,51 +360,69 @@
         }
 
         .compliance-content p {
-            color: #666;
-            line-height: 1.8;
+            color: #333;
+            line-height: 1.7;
             margin-bottom: 20px;
             font-size: 1.05rem;
+            word-wrap: break-word;
         }
 
-        .compliance-list {
-            list-style: none;
-            margin: 30px 0;
+        .compliance-list-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, 1fr);
             gap: 15px;
+            margin: 30px 0;
         }
 
-        .compliance-list li {
+        .compliance-item {
             display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #333;
-            font-weight: 500;
-            background: #f9f9f9;
+            align-items: flex-start;
+            gap: 12px;
+            background: #f5f5f5;
             padding: 15px;
             border-radius: 8px;
             border: 1px solid #e0e0e0;
-            transition: all 0.3s ease;
+            height: 100%;
         }
 
-        .compliance-list li:hover {
-            transform: translateX(5px);
-            border-color: #000000;
-            background: white;
-        }
-
-        .compliance-list li i {
+        .compliance-item i {
             color: #000000;
             font-size: 1.2rem;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        .compliance-item span {
+            color: #333;
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 1.4;
+            word-wrap: break-word;
+        }
+
+        .compliance-item.full-width {
+            grid-column: span 2;
+        }
+
+        .italic-quote {
+            margin-top: 25px;
+            font-style: italic;
+            color: #333;
+            border-left: 3px solid #000000;
+            padding-left: 25px;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            word-wrap: break-word;
         }
 
         .compliance-icon {
             text-align: center;
             background: linear-gradient(135deg, #f9f9f9, #ffffff);
-            padding: 50px;
+            padding: 50px 40px;
             border-radius: 20px;
             border: 1px solid #e0e0e0;
             box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            height: fit-content;
         }
 
         .compliance-icon i {
@@ -511,31 +437,27 @@
             margin-bottom: 15px;
         }
 
-        .compliance-badges {
+        .compliance-icon p {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            word-wrap: break-word;
+        }
+
+        .badges {
             display: flex;
             justify-content: center;
             gap: 15px;
-            margin-top: 25px;
             flex-wrap: wrap;
         }
 
-        .compliance-badges span {
+        .badges span {
             background: #000000;
             color: white;
             padding: 8px 20px;
             border-radius: 25px;
             font-size: 0.95rem;
             font-weight: 500;
-        }
-
-        .italic-quote {
-            margin-top: 25px;
-            font-style: italic;
-            color: #333;
-            border-left: 3px solid #000000;
-            padding-left: 25px;
-            font-size: 1.05rem;
-            line-height: 1.7;
         }
 
         /* CTA Section */
@@ -567,8 +489,6 @@
 
         .cta .btn:hover {
             background: #f0f0f0;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255,255,255,0.2);
         }
 
         /* Footer */
@@ -586,7 +506,7 @@
             margin: 0 auto 50px;
         }
 
-        .footer-col h3, .footer-col h4 {
+        .footer-col h4 {
             margin-bottom: 25px;
             font-size: 1.2rem;
             color: #ffffff;
@@ -623,15 +543,12 @@
             margin-bottom: 15px;
             color: #cccccc;
             word-wrap: break-word;
-            overflow-wrap: break-word;
         }
 
         .contact-info a {
             color: #cccccc;
             text-decoration: none;
-            transition: color 0.3s ease;
             word-wrap: break-word;
-            overflow-wrap: break-word;
         }
 
         .contact-info a:hover {
@@ -652,7 +569,7 @@
             font-size: 0.95rem;
         }
 
-        /* Mobile Navigation */
+        /* Responsive Design */
         @media (max-width: 992px) {
             .services-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -665,6 +582,10 @@
             
             .footer-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
             }
         }
 
@@ -683,7 +604,6 @@
                 background-color: white;
                 flex-direction: column;
                 padding: 30px 20px;
-                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
                 border-top: 1px solid #e0e0e0;
                 z-index: 1000;
                 overflow-y: auto;
@@ -696,7 +616,6 @@
             
             nav ul li {
                 width: 100%;
-                text-align: center;
             }
             
             nav ul li a {
@@ -705,10 +624,9 @@
                 font-size: 1.2rem;
                 background: #f5f5f5;
                 border-radius: 8px;
-                white-space: normal;
+                text-align: center;
             }
             
-            nav ul li a:hover,
             nav ul li a.active {
                 background: #000000;
                 color: white;
@@ -730,6 +648,19 @@
                 height: 70px;
             }
             
+            .hero {
+                padding: 150px 15px 100px;
+                margin-top: 120px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
             .stats {
                 flex-direction: column;
                 align-items: center;
@@ -740,8 +671,12 @@
                 max-width: 300px;
             }
             
-            .compliance-list {
+            .compliance-list-container {
                 grid-template-columns: 1fr;
+            }
+            
+            .compliance-item.full-width {
+                grid-column: span 1;
             }
         }
 
@@ -770,9 +705,34 @@
                 font-size: 0.7rem;
             }
             
-            nav ul {
-                top: 120px;
-                height: calc(100vh - 120px);
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .hero-buttons .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .compliance-icon {
+                padding: 40px 25px;
+            }
+            
+            .compliance-icon h3 {
+                font-size: 1.5rem;
+            }
+            
+            .badges span {
+                padding: 6px 15px;
+                font-size: 0.85rem;
             }
         }
 
@@ -789,32 +749,21 @@
                 font-size: 0.65rem;
             }
             
-            nav ul {
-                top: 110px;
-                height: calc(100vh - 110px);
-                padding: 20px 15px;
+            .hero {
+                padding: 120px 10px 70px;
+                margin-top: 100px;
             }
             
-            nav ul li a {
-                padding: 12px;
-                font-size: 1.1rem;
+            .hero h1 {
+                font-size: 1.5rem;
             }
             
-            .section-title h2 {
-                font-size: 2rem;
+            .hero p {
+                font-size: 0.95rem;
             }
             
             .service-card {
                 padding: 30px 20px;
-            }
-            
-            .compliance-icon {
-                padding: 30px 20px;
-            }
-            
-            .compliance-badges span {
-                padding: 6px 15px;
-                font-size: 0.85rem;
             }
             
             .cta h2 {
@@ -828,6 +777,19 @@
             .cta .btn {
                 padding: 12px 40px;
                 font-size: 1.1rem;
+            }
+            
+            .compliance-item {
+                padding: 12px;
+            }
+            
+            .compliance-item span {
+                font-size: 0.95rem;
+            }
+            
+            .italic-quote {
+                padding-left: 15px;
+                font-size: 0.95rem;
             }
         }
 
@@ -844,17 +806,18 @@
                 font-size: 0.6rem;
             }
             
-            nav ul {
-                top: 100px;
-                height: calc(100vh - 100px);
+            .hero h1 {
+                font-size: 1.3rem;
             }
-        }
-
-        /* Utility classes for text wrapping */
-        .break-word {
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            hyphens: auto;
+            
+            .compliance-icon i {
+                font-size: 4rem;
+            }
+            
+            .badges span {
+                padding: 5px 12px;
+                font-size: 0.8rem;
+            }
         }
     </style>
 </head>
@@ -938,7 +901,7 @@
     </div>
 </section>
 
-<!-- Professional Compliance Section -->
+<!-- Professional Compliance Section - FIXED -->
 <section class="compliance-section">
     <div class="container">
         <div class="compliance-grid">
@@ -947,13 +910,28 @@
                 <p>Sarah M Projects (Pty) Ltd is a privately owned South African company committed to operating in full compliance with national regulatory and industry standards. The company is officially registered with the Companies and Intellectual Property Commission (CIPC) and adheres to all applicable business and safety regulations governing operations within South Africa.</p>
                 <p>We maintain strict compliance to ensure reliability, accountability, and safety across all projects we support.</p>
                 
-                <ul class="compliance-list">
-                    <li><i class="fas fa-check-circle"></i> CIPC Registered Private Company (Pty) Ltd</li>
-                    <li><i class="fas fa-check-circle"></i> Tax Compliant with the South African Revenue Service</li>
-                    <li><i class="fas fa-check-circle"></i> B-BBEE Compliant</li>
-                    <li><i class="fas fa-check-circle"></i> Health & Safety Regulation Compliance</li>
-                    <li><i class="fas fa-check-circle"></i> Commitment to Industry Best Practices</li>
-                </ul>
+                <div class="compliance-list-container">
+                    <div class="compliance-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>CIPC Registered Private Company (Pty) Ltd</span>
+                    </div>
+                    <div class="compliance-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Tax Compliant with the South African Revenue Service</span>
+                    </div>
+                    <div class="compliance-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>B-BBEE Compliant</span>
+                    </div>
+                    <div class="compliance-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Health & Safety Regulation Compliance</span>
+                    </div>
+                    <div class="compliance-item full-width">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Commitment to Industry Best Practices</span>
+                    </div>
+                </div>
                 
                 <div class="italic-quote">
                     Through our compliance and governance standards, Sarah M Projects (Pty) Ltd ensures that all operations are conducted responsibly while supporting the safety and efficiency of mining, construction, and industrial environments.
@@ -963,7 +941,7 @@
                 <i class="fas fa-shield-alt"></i>
                 <h3>Fully Compliant</h3>
                 <p>Registered • Tax Compliant • B-BBEE • Health & Safety</p>
-                <div class="compliance-badges">
+                <div class="badges">
                     <span>CIPC</span>
                     <span>SARS</span>
                     <span>B-BBEE</span>
@@ -1021,7 +999,6 @@
     </div>
 </footer>
 
-<script src="script.js" defer></script>
 <script>
     // Set current year in footer
     document.getElementById('currentYear').textContent = new Date().getFullYear();
@@ -1044,7 +1021,6 @@
             }
         });
         
-        // Close menu when clicking a link
         navMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('show');
@@ -1053,7 +1029,6 @@
             });
         });
         
-        // Close menu when clicking outside
         document.addEventListener('click', function(e) {
             if (navMenu.classList.contains('show') && 
                 !navMenu.contains(e.target) && 
