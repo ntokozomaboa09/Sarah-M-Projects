@@ -4,1020 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="google-site-verification" content="6tPPHuSCAd9Ot-m0XDj0sPAEpXNCADej4H2AqERUdjI" />
-    
-    <!-- SEO Meta Tags -->
     <meta name="description" content="Sarah M Projects (Pty) Ltd - Your trusted partner for mining supplies, PPE suppliers for mining, industrial equipment rentals, and mining logistics services in South Africa. Reliable operational support for mining, construction, and industrial projects.">
     <meta name="keywords" content="Mining supplies South Africa, PPE suppliers for mining, Industrial equipment rentals, Mining logistics services, Construction supplies, Safety equipment, Site consumables, Equipment hire, Logistics solutions, Industrial supplies South Africa, B-BBEE compliant supplier, CIPC registered company">
     <meta name="author" content="Sarah M Projects (Pty) Ltd">
     <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph Tags for Social Media -->
     <meta property="og:title" content="Sarah M Projects (Pty) Ltd | Mining Supplies, PPE, Equipment Rentals & Logistics">
     <meta property="og:description" content="Leading supplier of mining supplies, PPE, industrial equipment rentals and logistics services in South Africa. B-BBEE compliant and CIPC registered.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sarahmprojects.co.za">
     <meta property="og:image" content="https://sarahmprojects.co.za/og-image.jpg">
-    
-    <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Sarah M Projects | Mining Supplies & Equipment Rentals">
     <meta name="twitter:description" content="Reliable mining supplies, PPE, industrial equipment rentals and logistics services across South Africa.">
-    
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://sarahmprojects.co.za">
-    
     <title>Sarah M Projects (Pty) Ltd | Mining Supplies, PPE, Equipment Rentals & Logistics South Africa</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <style>
-        /* Global Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #ffffff;
-            overflow-x: hidden;
-            width: 100%;
-        }
-
-        body.menu-open {
-            overflow: hidden;
-            position: fixed;
-            width: 100%;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #000000;
-            color: white;
-            padding: 12px 28px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            border: 2px solid #000000;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 16px;
-        }
-
-        .btn:hover {
-            background-color: #333333;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            color: #000000;
-        }
-
-        .btn-outline:hover {
-            background-color: #000000;
-            color: white;
-        }
-
-        /* Header Styles */
-        header {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .logo a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: #000000;
-            gap: 20px;
-        }
-
-        .logo-image {
-            height: 100px;
-            width: auto;
-            border-radius: 4px;
-            object-fit: contain;
-            flex-shrink: 0;
-        }
-
-        .logo-text h1 {
-            font-size: 1.8rem;
-            margin-bottom: 5px;
-            color: #000000;
-            font-weight: 700;
-        }
-
-        .logo-text span {
-            font-size: 1rem;
-            color: #666;
-            font-weight: 500;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.8rem;
-            color: #000000;
-            cursor: pointer;
-            padding: 10px;
-            z-index: 1001;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 600;
-            padding: 8px 0;
-            position: relative;
-            transition: color 0.3s ease;
-            font-size: 1.1rem;
-        }
-
-        nav a:hover, nav a.active {
-            color: #000000;
-        }
-
-        nav a.active::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: #000000;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 180px 20px 120px;
-            margin-top: 130px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            line-height: 1.3;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            word-wrap: break-word;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 35px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.7;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        /* Services Preview */
-        .services-preview {
-            padding: 100px 20px;
-            background-color: white;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: #000000;
-            margin-bottom: 15px;
-            position: relative;
-            display: inline-block;
-            padding-bottom: 15px;
-        }
-
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: #000000;
-        }
-
-        .section-title p {
-            color: #666;
-            font-size: 1.2rem;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .service-card {
-            background: #f9f9f9;
-            border-radius: 12px;
-            padding: 40px 30px;
-            text-align: center;
-            border: 1px solid #e0e0e0;
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 30px rgba(0,0,0,0.1);
-            border-color: #000000;
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            color: #000000;
-            margin-bottom: 25px;
-        }
-
-        .service-card h3 {
-            margin-bottom: 15px;
-            color: #000000;
-            font-size: 1.5rem;
-        }
-
-        .service-card p {
-            color: #666;
-            margin-bottom: 25px;
-        }
-
-        .service-link {
-            color: #000000;
-            text-decoration: none;
-            font-weight: 600;
-            border-bottom: 2px solid #000000;
-            padding-bottom: 2px;
-        }
-
-        /* Why Choose Us Section - NEW */
-        .why-choose-us {
-            padding: 100px 20px;
-            background: linear-gradient(135deg, #f5f5f5, #ffffff);
-            text-align: center;
-            border-top: 1px solid #e0e0e0;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .why-choose-us h2 {
-            font-size: 2.5rem;
-            color: #000000;
-            margin-bottom: 20px;
-            position: relative;
-            display: inline-block;
-            padding-bottom: 15px;
-        }
-
-        .why-choose-us h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: #000000;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1100px;
-            margin: 50px auto 0;
-        }
-
-        .benefit-card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 12px;
-            border: 1px solid #e0e0e0;
-            transition: all 0.3s ease;
-            text-align: left;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .benefit-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: #000000;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 30px rgba(0,0,0,0.1);
-            border-color: #000000;
-        }
-
-        .benefit-icon {
-            font-size: 2rem;
-            color: #000000;
-            margin-bottom: 20px;
-        }
-
-        .benefit-card h3 {
-            font-size: 1.4rem;
-            color: #000000;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .benefit-card p {
-            color: #666;
-            line-height: 1.7;
-            margin-bottom: 0;
-        }
-
-        .benefit-card .fa-check-circle {
-            color: #000000;
-            margin-right: 10px;
-        }
-
-        /* About Preview */
-        .about-preview {
-            padding: 100px 20px;
-            background: linear-gradient(135deg, #ffffff, #f5f5f5);
-            text-align: center;
-        }
-
-        .about-preview h2 {
-            font-size: 2.5rem;
-            color: #000000;
-            margin-bottom: 20px;
-        }
-
-        .about-preview > p {
-            margin-bottom: 40px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            font-size: 1.2rem;
-            color: #666;
-        }
-
-        .stats {
-            display: flex;
-            gap: 40px;
-            margin: 50px 0;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .stat-item {
-            text-align: center;
-            flex: 0 1 200px;
-            padding: 30px 20px;
-            background: white;
-            border-radius: 12px;
-            border: 1px solid #e0e0e0;
-            transition: all 0.3s ease;
-        }
-
-        .stat-item:hover {
-            transform: translateY(-5px);
-            border-color: #000000;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-        }
-
-        .stat-item h3 {
-            font-size: 2.5rem;
-            color: #000000;
-            margin-bottom: 10px;
-        }
-
-        .stat-item p {
-            color: #666;
-        }
-
-        /* Compliance Section */
-        .compliance-section {
-            padding: 100px 20px;
-            background-color: white;
-            width: 100%;
-        }
-
-        .compliance-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .compliance-content {
-            width: 100%;
-        }
-
-        .compliance-content h2 {
-            font-size: 2.2rem;
-            color: #000000;
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 15px;
-        }
-
-        .compliance-content h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 80px;
-            height: 3px;
-            background-color: #000000;
-        }
-
-        .compliance-content p {
-            color: #333;
-            line-height: 1.7;
-            margin-bottom: 20px;
-            font-size: 1.05rem;
-            word-wrap: break-word;
-        }
-
-        .compliance-list-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin: 30px 0;
-        }
-
-        .compliance-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            background: #f5f5f5;
-            padding: 15px;
-            border-radius: 8px;
-            border: 1px solid #e0e0e0;
-            height: 100%;
-            transition: all 0.3s ease;
-        }
-
-        .compliance-item:hover {
-            border-color: #000000;
-            background: #f0f0f0;
-        }
-
-        .compliance-item i {
-            color: #000000;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-            margin-top: 3px;
-        }
-
-        .compliance-item span {
-            color: #333;
-            font-weight: 500;
-            font-size: 1rem;
-            line-height: 1.4;
-            word-wrap: break-word;
-        }
-
-        .compliance-item.full-width {
-            grid-column: span 2;
-        }
-
-        .italic-quote {
-            margin-top: 25px;
-            font-style: italic;
-            color: #333;
-            border-left: 3px solid #000000;
-            padding-left: 25px;
-            font-size: 1.05rem;
-            line-height: 1.7;
-            word-wrap: break-word;
-        }
-
-        .compliance-icon {
-            text-align: center;
-            background: linear-gradient(135deg, #f9f9f9, #ffffff);
-            padding: 50px 40px;
-            border-radius: 20px;
-            border: 1px solid #e0e0e0;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-            height: fit-content;
-        }
-
-        .compliance-icon i {
-            font-size: 5rem;
-            color: #000000;
-            margin-bottom: 25px;
-        }
-
-        .compliance-icon h3 {
-            font-size: 1.8rem;
-            color: #000000;
-            margin-bottom: 15px;
-        }
-
-        .compliance-icon p {
-            color: #666;
-            font-size: 1.1rem;
-            margin-bottom: 25px;
-            word-wrap: break-word;
-        }
-
-        .badges {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .badges span {
-            background: #000000;
-            color: white;
-            padding: 8px 20px;
-            border-radius: 25px;
-            font-size: 0.95rem;
-            font-weight: 500;
-        }
-
-        /* CTA Section */
-        .cta {
-            background: linear-gradient(135deg, #000000, #333333);
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-        }
-
-        .cta h2 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-        }
-
-        .cta p {
-            font-size: 1.3rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
-        }
-
-        .cta .btn {
-            background: white;
-            color: #000000;
-            padding: 15px 50px;
-            font-size: 1.2rem;
-            border: none;
-        }
-
-        .cta .btn:hover {
-            background: #f0f0f0;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #000000;
-            color: white;
-            padding: 70px 20px 30px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 50px;
-            max-width: 1200px;
-            margin: 0 auto 50px;
-        }
-
-        .footer-col h4 {
-            margin-bottom: 25px;
-            font-size: 1.2rem;
-            color: #ffffff;
-        }
-
-        .footer-logo-img {
-            height: 70px;
-            width: auto;
-            margin-bottom: 20px;
-        }
-
-        .footer-col ul {
-            list-style: none;
-        }
-
-        .footer-col ul li {
-            margin-bottom: 12px;
-        }
-
-        .footer-col ul li a {
-            color: #cccccc;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-col ul li a:hover {
-            color: white;
-        }
-
-        .contact-info p {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 15px;
-            color: #cccccc;
-            word-wrap: break-word;
-        }
-
-        .contact-info a {
-            color: #cccccc;
-            text-decoration: none;
-            word-wrap: break-word;
-        }
-
-        .contact-info a:hover {
-            color: white;
-        }
-
-        .contact-info i {
-            width: 20px;
-            color: #ffffff;
-            flex-shrink: 0;
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: #cccccc;
-            font-size: 0.95rem;
-        }
-
-        /* ===== MOBILE HEADER ADJUSTMENTS - LOGO LEFT, MENU RIGHT ===== */
-        @media (max-width: 992px) {
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .compliance-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            
-            .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-            
-            .benefits-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block !important;
-            }
-            
-            .header-container {
-                padding: 8px 12px !important;
-            }
-            
-            .logo a {
-                gap: 8px !important;
-            }
-            
-            .logo-image {
-                height: 60px !important;
-                width: auto;
-                margin-right: 5px;
-            }
-            
-            .logo-text h1 {
-                font-size: 1.1rem !important;
-                margin-bottom: 2px;
-            }
-            
-            .logo-text span {
-                font-size: 0.7rem !important;
-            }
-            
-            .mobile-menu-btn {
-                font-size: 1.3rem !important;
-                padding: 8px !important;
-            }
-            
-            nav ul {
-                display: none;
-                position: fixed;
-                top: 76px;
-                left: 0;
-                width: 100%;
-                height: calc(100vh - 76px);
-                background-color: white;
-                flex-direction: column;
-                padding: 30px 20px;
-                border-top: 1px solid #e0e0e0;
-                z-index: 1000;
-                overflow-y: auto;
-                gap: 15px;
-            }
-            
-            nav ul.show {
-                display: flex;
-            }
-            
-            nav ul li {
-                width: 100%;
-            }
-            
-            nav ul li a {
-                display: block;
-                padding: 15px;
-                font-size: 1.2rem;
-                background: #f5f5f5;
-                border-radius: 8px;
-                text-align: center;
-            }
-            
-            nav ul li a.active {
-                background: #000000;
-                color: white;
-            }
-            
-            nav ul li a.active::after {
-                display: none;
-            }
-            
-            .hero {
-                padding: 150px 15px 100px;
-                margin-top: 76px;
-            }
-            
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-            
-            .stats {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .stat-item {
-                width: 100%;
-                max-width: 300px;
-            }
-            
-            .compliance-list-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .compliance-item.full-width {
-                grid-column: span 1;
-            }
-            
-            .benefits-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .logo-image {
-                height: 55px !important;
-            }
-            
-            .logo-text h1 {
-                font-size: 1rem !important;
-            }
-            
-            .logo-text span {
-                font-size: 0.65rem !important;
-            }
-            
-            .mobile-menu-btn {
-                font-size: 1.2rem !important;
-                padding: 6px !important;
-            }
-            
-            nav ul {
-                top: 71px;
-                height: calc(100vh - 71px);
-            }
-            
-            .hero {
-                margin-top: 71px;
-                padding: 120px 15px 80px;
-            }
-            
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            .hero-buttons .btn {
-                width: 100%;
-                max-width: 280px;
-            }
-            
-            .section-title h2 {
-                font-size: 2rem;
-            }
-            
-            .compliance-icon {
-                padding: 40px 25px;
-            }
-            
-            .compliance-icon h3 {
-                font-size: 1.5rem;
-            }
-            
-            .badges span {
-                padding: 6px 15px;
-                font-size: 0.85rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header-container {
-                padding: 5px 10px !important;
-            }
-            
-            .logo-image {
-                height: 50px !important;
-            }
-            
-            .logo-text h1 {
-                font-size: 0.95rem !important;
-            }
-            
-            .logo-text span {
-                font-size: 0.6rem !important;
-            }
-            
-            .mobile-menu-btn {
-                font-size: 1.1rem !important;
-                padding: 5px !important;
-            }
-            
-            nav ul {
-                top: 66px;
-                height: calc(100vh - 66px);
-            }
-            
-            .hero {
-                margin-top: 66px;
-                padding: 100px 10px 70px;
-            }
-            
-            .hero h1 {
-                font-size: 1.5rem;
-            }
-            
-            .hero p {
-                font-size: 0.95rem;
-            }
-            
-            .service-card {
-                padding: 30px 20px;
-            }
-            
-            .cta h2 {
-                font-size: 2rem;
-            }
-            
-            .cta p {
-                font-size: 1.1rem;
-            }
-            
-            .cta .btn {
-                padding: 12px 40px;
-                font-size: 1.1rem;
-            }
-            
-            .compliance-item {
-                padding: 12px;
-            }
-            
-            .compliance-item span {
-                font-size: 0.95rem;
-            }
-            
-            .italic-quote {
-                padding-left: 15px;
-                font-size: 0.95rem;
-            }
-        }
-
-        @media (max-width: 360px) {
-            .logo-image {
-                height: 45px !important;
-            }
-            
-            .logo-text h1 {
-                font-size: 0.85rem !important;
-            }
-            
-            .logo-text span {
-                font-size: 0.55rem !important;
-            }
-            
-            .mobile-menu-btn {
-                font-size: 1rem !important;
-                padding: 4px !important;
-            }
-            
-            nav ul {
-                top: 61px;
-                height: calc(100vh - 61px);
-            }
-            
-            .hero {
-                margin-top: 61px;
-            }
-            
-            .hero h1 {
-                font-size: 1.3rem;
-            }
-            
-            .compliance-icon i {
-                font-size: 4rem;
-            }
-            
-            .badges span {
-                padding: 5px 12px;
-                font-size: 0.8rem;
-            }
-        }
-    </style>
 </head>
 <body>
 <header>
     <div class="container header-container">
         <div class="logo">
-            <a href="index.html">
-                <img src="logo.png" alt="Sarah M Projects (Pty) Ltd - Mining Supplies, PPE & Equipment Rentals South Africa" class="logo-image" loading="eager">
+            <a href="/">
+                <img src="logo.png" alt="Sarah M Projects - Mining Supplies, PPE & Equipment Rentals South Africa" class="logo-image" loading="eager">
                 <div class="logo-text">
                     <h1>Sarah M Projects (Pty) Ltd</h1>
                     <span>Mining Supplies • PPE • Equipment Rentals • Logistics</span>
@@ -1029,11 +39,11 @@
         </button>
         <nav>
             <ul id="navMenu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -1044,8 +54,8 @@
         <h1>RELIABLE MINING SUPPLIES, PPE & EQUIPMENT RENTALS IN SOUTH AFRICA</h1>
         <p>Sarah M Projects (Pty) Ltd delivers essential mining supplies, compliant PPE, dependable logistics and flexible equipment rentals with a commitment to safety compliance, operational efficiency, and service excellence.</p>
         <div class="hero-buttons">
-            <a href="services.html" class="btn">Our Services</a>
-            <a href="contact.html" class="btn btn-outline">Get a Quote</a>
+            <a href="/services" class="btn">Our Services</a>
+            <a href="/contact" class="btn btn-outline">Get a Quote</a>
         </div>
     </div>
 </section>
@@ -1061,61 +71,54 @@
                 <div class="service-icon"><i class="fas fa-hard-hat"></i></div>
                 <h3>Mining Supplies & PPE</h3>
                 <p>Compliant PPE, safety equipment, and essential site consumables for mining and industrial projects.</p>
-                <a href="services.html#supplies" class="service-link">Learn More →</a>
+                <a href="/services#supplies" class="service-link">Learn More →</a>
             </div>
             <div class="service-card">
                 <div class="service-icon"><i class="fas fa-truck-moving"></i></div>
                 <h3>Mining Logistics Services</h3>
                 <p>Reliable transportation and delivery solutions for mining and construction sites nationwide.</p>
-                <a href="services.html#logistics" class="service-link">Learn More →</a>
+                <a href="/services#logistics" class="service-link">Learn More →</a>
             </div>
             <div class="service-card">
                 <div class="service-icon"><i class="fas fa-tools"></i></div>
                 <h3>Industrial Equipment Rentals</h3>
                 <p>Flexible rental solutions for industrial equipment including generators, lighting and sanitation units.</p>
-                <a href="services.html#rentals" class="service-link">Learn More →</a>
+                <a href="/services#rentals" class="service-link">Learn More →</a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- NEW: Why Choose Us Section -->
 <section class="why-choose-us">
     <div class="container">
         <h2>Why Choose Sarah M Projects</h2>
         <p style="color: #666; font-size: 1.2rem; max-width: 700px; margin: 0 auto;">Your trusted partner for mining supplies, PPE, equipment rentals and logistics in South Africa</p>
-        
         <div class="benefits-grid">
             <div class="benefit-card">
                 <div class="benefit-icon"><i class="fas fa-truck"></i></div>
                 <h3><i class="fas fa-check-circle"></i> Reliable Supply Chain Solutions</h3>
                 <p>End-to-end supply chain management ensuring your mining and construction projects never face delays. We deliver on time, every time.</p>
             </div>
-            
             <div class="benefit-card">
                 <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
                 <h3><i class="fas fa-check-circle"></i> Safety-Compliant Equipment & PPE</h3>
                 <p>All our mining supplies and PPE meet South African safety standards and industry regulations. Your team's safety is our priority.</p>
             </div>
-            
             <div class="benefit-card">
                 <div class="benefit-icon"><i class="fas fa-map-marked-alt"></i></div>
                 <h3><i class="fas fa-check-circle"></i> Nationwide Logistics Support</h3>
                 <p>From Gauteng to Limpopo, Mpumalanga to remote mining sites - our logistics network covers all of South Africa.</p>
             </div>
-            
             <div class="benefit-card">
                 <div class="benefit-icon"><i class="fas fa-calendar-alt"></i></div>
                 <h3><i class="fas fa-check-circle"></i> Flexible Equipment Rental Options</h3>
                 <p>Daily, weekly, or monthly rentals for industrial equipment. Short-term and long-term solutions to match your project needs.</p>
             </div>
-            
             <div class="benefit-card">
                 <div class="benefit-icon"><i class="fas fa-headset"></i></div>
                 <h3><i class="fas fa-check-circle"></i> Dedicated Client Support</h3>
                 <p>Personalized account management and 24/7 support for urgent mining supplies, PPE, or equipment requirements.</p>
             </div>
-            
             <div class="benefit-card">
                 <div class="benefit-icon"><i class="fas fa-file-signature"></i></div>
                 <h3><i class="fas fa-check-circle"></i> Fully Compliant & Registered</h3>
@@ -1134,11 +137,10 @@
             <div class="stat-item"><h3>Reliable</h3><p>On-Time Delivery</p></div>
             <div class="stat-item"><h3>100%</h3><p>Safety Compliance</p></div>
         </div>
-        <a href="about.html" class="btn">Our Story</a>
+        <a href="/about" class="btn">Our Story</a>
     </div>
 </section>
 
-<!-- Professional Compliance Section -->
 <section class="compliance-section">
     <div class="container">
         <div class="compliance-grid">
@@ -1146,7 +148,6 @@
                 <h2>Compliance & Registration</h2>
                 <p>Sarah M Projects (Pty) Ltd is a privately owned South African company committed to operating in full compliance with national regulatory and industry standards. The company is officially registered with the Companies and Intellectual Property Commission (CIPC) and adheres to all applicable business and safety regulations governing operations within South Africa.</p>
                 <p>We maintain strict compliance to ensure reliability, accountability, and safety across all mining supplies, PPE, and equipment rental projects we support.</p>
-                
                 <div class="compliance-list-container">
                     <div class="compliance-item">
                         <i class="fas fa-check-circle"></i>
@@ -1169,7 +170,6 @@
                         <span>Commitment to Industry Best Practices</span>
                     </div>
                 </div>
-                
                 <div class="italic-quote">
                     Through our compliance and governance standards, Sarah M Projects (Pty) Ltd ensures that all mining supplies, PPE, equipment rentals and logistics operations are conducted responsibly while supporting the safety and efficiency of mining, construction, and industrial environments.
                 </div>
@@ -1192,7 +192,7 @@
     <div class="container">
         <h2>Ready to Start Your Next Mining Project?</h2>
         <p>Contact us today for mining supplies, PPE, equipment rentals, or logistics support.</p>
-        <a href="contact.html" class="btn">Get a Quote</a>
+        <a href="/contact" class="btn">Get a Quote</a>
     </div>
 </section>
 
@@ -1206,19 +206,19 @@
         <div class="footer-col">
             <h4>Quick Links</h4>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
         </div>
         <div class="footer-col">
             <h4>Our Services</h4>
             <ul>
-                <li><a href="services.html#supplies">Mining Supplies & PPE</a></li>
-                <li><a href="services.html#logistics">Mining Logistics Services</a></li>
-                <li><a href="services.html#rentals">Industrial Equipment Rentals</a></li>
+                <li><a href="/services#supplies">Mining Supplies & PPE</a></li>
+                <li><a href="/services#logistics">Mining Logistics Services</a></li>
+                <li><a href="/services#rentals">Industrial Equipment Rentals</a></li>
             </ul>
         </div>
         <div class="footer-col">
@@ -1236,152 +236,6 @@
     </div>
 </footer>
 
-<script>
-    // Set current year in footer
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-    
-    // Mobile menu functionality - IMPROVED VERSION
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const navMenu = document.getElementById('navMenu');
-    
-    if (mobileMenuBtn && navMenu) {
-        mobileMenuBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            e.preventDefault();
-            const isOpen = navMenu.classList.contains('show');
-            
-            if (isOpen) {
-                navMenu.classList.remove('show');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                document.body.classList.remove('menu-open');
-            } else {
-                navMenu.classList.add('show');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-times"></i>';
-                document.body.classList.add('menu-open');
-            }
-        });
-        
-        navMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', function() {
-                navMenu.classList.remove('show');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                document.body.classList.remove('menu-open');
-            });
-        });
-        
-        document.addEventListener('click', function(e) {
-            if (navMenu.classList.contains('show') && 
-                !navMenu.contains(e.target) && 
-                !mobileMenuBtn.contains(e.target)) {
-                navMenu.classList.remove('show');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                document.body.classList.remove('menu-open');
-            }
-        });
-        
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768 && navMenu.classList.contains('show')) {
-                navMenu.classList.remove('show');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                document.body.classList.remove('menu-open');
-            }
-        });
-    }
-    
-    // Smooth scroll for hash links
-    document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                const headerHeight = window.innerWidth <= 768 ? 76 : 130;
-                const targetPosition = targetElement.offsetTop - headerHeight - 20;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-    
-    // Set active navigation based on current page
-    function setActiveNav() {
-        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-        document.querySelectorAll('#navMenu a').forEach(link => {
-            const linkHref = link.getAttribute('href');
-            link.classList.remove('active');
-            if (linkHref === currentPage) {
-                link.classList.add('active');
-            }
-        });
-    }
-    
-    // Update active nav on scroll (for single page sections)
-    function updateActiveNavOnScroll() {
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('#navMenu a');
-        
-        if (sections.length === 0) return;
-        
-        let current = '';
-        const scrollPosition = window.scrollY + 200;
-        const headerHeight = window.innerWidth <= 768 ? 76 : 130;
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - headerHeight;
-            const sectionBottom = sectionTop + section.offsetHeight;
-            
-            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                current = section.getAttribute('id');
-            }
-        });
-        
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
-        });
-    }
-    
-    // Document ready
-    document.addEventListener('DOMContentLoaded', function() {
-        setActiveNav();
-        
-        // Detect touch device
-        if ('ontouchstart' in window || navigator.maxTouchPoints) {
-            document.body.classList.add('touch-device');
-        }
-        
-        console.log('Sarah M Projects (Pty) Ltd loaded successfully');
-    });
-    
-    // Scroll event listener
-    window.addEventListener('scroll', updateActiveNavOnScroll);
-    
-    // Track phone clicks
-    document.querySelectorAll('a[href^="tel:"]').forEach(phone => {
-        phone.addEventListener('click', function() {
-            console.log('Phone call initiated');
-        });
-    });
-    
-    // Track email clicks
-    document.querySelectorAll('a[href^="mailto:"]').forEach(email => {
-        email.addEventListener('click', function() {
-            console.log('Email link clicked');
-        });
-    });
-    
-    // Track WhatsApp clicks
-    document.querySelectorAll('a[href*="wa.me"]').forEach(whatsapp => {
-        whatsapp.addEventListener('click', function() {
-            console.log('WhatsApp chat initiated');
-        });
-    });
-</script>
+<script src="script.js"></script>
 </body>
 </html>
