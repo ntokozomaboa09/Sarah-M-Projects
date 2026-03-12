@@ -24,6 +24,12 @@
             width: 100%;
         }
 
+        body.menu-open {
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+        }
+
         .container {
             width: 100%;
             max-width: 1200px;
@@ -589,7 +595,10 @@
         }
 
         @media (max-width: 768px) {
-            /* Header adjustments - Logo left, menu button right */
+            .mobile-menu-btn {
+                display: block !important;
+            }
+            
             .header-container {
                 padding: 8px 12px !important;
             }
@@ -614,16 +623,14 @@
             }
             
             .mobile-menu-btn {
-                display: block !important;
                 font-size: 1.3rem !important;
                 padding: 8px !important;
             }
             
-            /* Mobile menu styles */
             nav ul {
                 display: none;
                 position: fixed;
-                top: 76px; /* Adjusted for smaller header */
+                top: 76px;
                 left: 0;
                 width: 100%;
                 height: calc(100vh - 76px);
@@ -662,10 +669,9 @@
                 display: none;
             }
             
-            /* Hero adjustments */
             .hero {
                 padding: 150px 15px 100px;
-                margin-top: 76px; /* Match header height */
+                margin-top: 76px;
             }
             
             .hero h1 {
@@ -722,7 +728,7 @@
             }
             
             nav ul {
-                top: 71px; /* Adjusted for smaller header */
+                top: 71px;
                 height: calc(100vh - 71px);
             }
             
@@ -854,6 +860,10 @@
             nav ul {
                 top: 61px;
                 height: calc(100vh - 61px);
+            }
+            
+            .hero {
+                margin-top: 61px;
             }
             
             .hero h1 {
@@ -1053,29 +1063,32 @@
     // Set current year in footer
     document.getElementById('currentYear').textContent = new Date().getFullYear();
     
-    // Mobile menu functionality
+    // Mobile menu functionality - IMPROVED VERSION
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const navMenu = document.getElementById('navMenu');
     
     if (mobileMenuBtn && navMenu) {
         mobileMenuBtn.addEventListener('click', function(e) {
             e.stopPropagation();
-            navMenu.classList.toggle('show');
-            const icon = this.querySelector('i');
-            if (navMenu.classList.contains('show')) {
-                icon.className = 'fas fa-times';
-                document.body.style.overflow = 'hidden';
+            e.preventDefault();
+            const isOpen = navMenu.classList.contains('show');
+            
+            if (isOpen) {
+                navMenu.classList.remove('show');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.classList.remove('menu-open');
             } else {
-                icon.className = 'fas fa-bars';
-                document.body.style.overflow = '';
+                navMenu.classList.add('show');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-times"></i>';
+                document.body.classList.add('menu-open');
             }
         });
         
         navMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
+            link.addEventListener('click', function() {
                 navMenu.classList.remove('show');
-                mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
-                document.body.style.overflow = '';
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.classList.remove('menu-open');
             });
         });
         
@@ -1084,16 +1097,114 @@
                 !navMenu.contains(e.target) && 
                 !mobileMenuBtn.contains(e.target)) {
                 navMenu.classList.remove('show');
-                mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
-                document.body.style.overflow = '';
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.classList.remove('menu-open');
+            }
+        });
+        
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768 && navMenu.classList.contains('show')) {
+                navMenu.classList.remove('show');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.classList.remove('menu-open');
             }
         });
     }
-
-    // Detect touch device
-    if ('ontouchstart' in window || navigator.maxTouchPoints) {
-        document.body.classList.add('touch-device');
+    
+    // Smooth scroll for hash links
+    document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                const headerHeight = window.innerWidth <= 768 ? 76 : 130;
+                const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Set active navigation based on current page
+    function setActiveNav() {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('#navMenu a').forEach(link => {
+            const linkHref = link.getAttribute('href');
+            link.classList.remove('active');
+            if (linkHref === currentPage) {
+                link.classList.add('active');
+            }
+        });
     }
+    
+    // Update active nav on scroll (for single page sections)
+    function updateActiveNavOnScroll() {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('#navMenu a');
+        
+        if (sections.length === 0) return;
+        
+        let current = '';
+        const scrollPosition = window.scrollY + 200;
+        const headerHeight = window.innerWidth <= 768 ? 76 : 130;
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - headerHeight;
+            const sectionBottom = sectionTop + section.offsetHeight;
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    }
+    
+    // Document ready
+    document.addEventListener('DOMContentLoaded', function() {
+        setActiveNav();
+        
+        // Detect touch device
+        if ('ontouchstart' in window || navigator.maxTouchPoints) {
+            document.body.classList.add('touch-device');
+        }
+        
+        console.log('Sarah M Projects (Pty) Ltd loaded successfully');
+    });
+    
+    // Scroll event listener
+    window.addEventListener('scroll', updateActiveNavOnScroll);
+    
+    // Track phone clicks
+    document.querySelectorAll('a[href^="tel:"]').forEach(phone => {
+        phone.addEventListener('click', function() {
+            console.log('Phone call initiated');
+        });
+    });
+    
+    // Track email clicks
+    document.querySelectorAll('a[href^="mailto:"]').forEach(email => {
+        email.addEventListener('click', function() {
+            console.log('Email link clicked');
+        });
+    });
+    
+    // Track WhatsApp clicks
+    document.querySelectorAll('a[href*="wa.me"]').forEach(whatsapp => {
+        whatsapp.addEventListener('click', function() {
+            console.log('WhatsApp chat initiated');
+        });
+    });
 </script>
 </body>
 </html>
