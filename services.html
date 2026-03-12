@@ -4,816 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="google-site-verification" content="6tPPHuSCAd9Ot-m0XDj0sPAEpXNCADej4H2AqERUdjI" />
-    <title>Our Services | Sarah M Projects (Pty) Ltd</title>
+    <meta name="description" content="Sarah M Projects (Pty) Ltd services - Mining supplies, PPE suppliers for mining, industrial equipment rentals, and mining logistics services in South Africa.">
+    <meta name="keywords" content="Mining supplies South Africa, PPE suppliers for mining, Industrial equipment rentals, Mining logistics services, Construction supplies, Safety equipment, Site consumables">
+    <meta name="author" content="Sarah M Projects (Pty) Ltd">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Our Services | Sarah M Projects - Mining Supplies, PPE & Equipment Rentals">
+    <meta property="og:description" content="Comprehensive mining supplies, PPE, equipment rentals and logistics services in South Africa.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sarahmprojects.co.za/services">
+    <link rel="canonical" href="https://sarahmprojects.co.za/services">
+    <title>Our Services | Sarah M Projects - Mining Supplies, PPE & Equipment Rentals South Africa</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #ffffff;
-            overflow-x: hidden;
-            width: 100%;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #000000;
-            color: white;
-            padding: 12px 28px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            border: 2px solid #000000;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 16px;
-        }
-
-        .btn:hover {
-            background-color: #333333;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            color: #000000;
-        }
-
-        .btn-outline:hover {
-            background-color: #000000;
-            color: white;
-        }
-
-        header {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .logo a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: #000000;
-            gap: 20px;
-        }
-
-        .logo-image {
-            height: 100px;
-            width: auto;
-            border-radius: 4px;
-            object-fit: contain;
-            flex-shrink: 0;
-        }
-
-        .logo-text h1 {
-            font-size: 1.8rem;
-            margin-bottom: 5px;
-            color: #000000;
-            font-weight: 700;
-        }
-
-        .logo-text span {
-            font-size: 1rem;
-            color: #666;
-            font-weight: 500;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.8rem;
-            color: #000000;
-            cursor: pointer;
-            padding: 10px;
-            z-index: 1001;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 600;
-            padding: 8px 0;
-            position: relative;
-            transition: color 0.3s ease;
-            font-size: 1.1rem;
-        }
-
-        nav a:hover, nav a.active {
-            color: #000000;
-        }
-
-        nav a.active::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: #000000;
-        }
-
-        .page-banner {
-            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 180px 20px 120px;
-            margin-top: 130px;
-            text-align: center;
-        }
-
-        .page-banner h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .page-banner p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto;
-            opacity: 0.9;
-        }
-
-        .services-nav {
-            background-color: white;
-            padding: 20px 0;
-            border-bottom: 1px solid #e0e0e0;
-            border-top: 1px solid #e0e0e0;
-            width: 100%;
-        }
-        
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        
-        .nav-link {
-            padding: 12px 30px;
-            text-decoration: none;
-            color: #333;
-            font-weight: 600;
-            border-radius: 4px;
-            border: 1px solid #e0e0e0;
-            transition: all 0.3s ease;
-            background-color: white;
-            font-size: 1rem;
-            display: inline-block;
-        }
-        
-        .nav-link:hover, .nav-link.active {
-            background-color: #000000;
-            color: white;
-            border-color: #000000;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        
-        .service-detail {
-            padding: 100px 20px;
-            background-color: white;
-            border-bottom: 1px solid #e0e0e0;
-            scroll-margin-top: 200px;
-        }
-        
-        .service-detail.alt {
-            background-color: #f9f9f9;
-        }
-        
-        .service-header {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            margin-bottom: 50px;
-            background: linear-gradient(135deg, #f5f5f5, #ffffff);
-            padding: 40px;
-            border-radius: 12px;
-            border: 1px solid #e0e0e0;
-        }
-        
-        .service-icon.large {
-            font-size: 4rem;
-            color: #000000;
-            background: white;
-            width: 100px;
-            height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            border: 2px solid #000000;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        
-        .service-title h2 {
-            font-size: 2.5rem;
-            color: #000000;
-            margin-bottom: 10px;
-        }
-        
-        .service-title p {
-            color: #666;
-            font-size: 1.2rem;
-        }
-        
-        .service-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 50px;
-        }
-        
-        .service-description h3 {
-            font-size: 1.8rem;
-            color: #000000;
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .service-description h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background-color: #000000;
-        }
-        
-        .service-features {
-            margin-top: 30px;
-        }
-        
-        .feature {
-            margin-bottom: 25px;
-            border-left: 3px solid #000000;
-            background: #f9f9f9;
-            padding: 25px;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-        }
-        
-        .feature:hover {
-            transform: translateX(5px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-        
-        .feature h4 {
-            color: #000000;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.3rem;
-        }
-        
-        .feature h4 i {
-            color: #000000;
-        }
-        
-        .feature p {
-            color: #666;
-            line-height: 1.7;
-        }
-        
-        .rental-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 30px;
-        }
-        
-        .rental-item {
-            background: #f9f9f9;
-            padding: 25px;
-            border-radius: 8px;
-            border: 1px solid #e0e0e0;
-            transition: all 0.3s ease;
-        }
-        
-        .rental-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            border-color: #000000;
-        }
-        
-        .rental-item h4 {
-            color: #000000;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.2rem;
-        }
-        
-        .service-benefits {
-            background: #f9f9f9;
-            padding: 40px;
-            border-radius: 12px;
-            border: 1px solid #e0e0e0;
-            position: sticky;
-            top: 200px;
-        }
-        
-        .service-benefits h3 {
-            font-size: 1.8rem;
-            color: #000000;
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .service-benefits h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background-color: #000000;
-        }
-        
-        .service-benefits ul {
-            list-style: none;
-            margin-bottom: 30px;
-        }
-        
-        .service-benefits li {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px;
-            background: white;
-            border-radius: 4px;
-            transition: transform 0.3s ease;
-        }
-        
-        .service-benefits li:hover {
-            transform: translateX(5px);
-            background: #f0f0f0;
-        }
-        
-        .service-benefits li i {
-            color: #000000;
-            width: 20px;
-        }
-        
-        .cta-box {
-            background: linear-gradient(135deg, #000000, #333333);
-            color: white;
-            padding: 30px;
-            border-radius: 8px;
-            text-align: center;
-            margin-top: 20px;
-        }
-        
-        .cta-box h4 {
-            margin-bottom: 10px;
-            font-size: 1.3rem;
-        }
-        
-        .cta-box p {
-            margin-bottom: 20px;
-            opacity: 0.9;
-        }
-        
-        .cta-box .btn {
-            background: white;
-            color: #000000;
-            border: none;
-        }
-        
-        .cta-box .btn:hover {
-            background: #f0f0f0;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(255,255,255,0.2);
-        }
-        
-        .service-cta {
-            background: linear-gradient(135deg, #000000, #333333);
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-        }
-        
-        .service-cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .service-cta p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            opacity: 0.9;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .cta-buttons .btn {
-            min-width: 200px;
-        }
-        
-        .cta-buttons .btn-outline {
-            border-color: white;
-            color: white;
-        }
-        
-        .cta-buttons .btn-outline:hover {
-            background: white;
-            color: #000000;
-        }
-
-        footer {
-            background-color: #000000;
-            color: white;
-            padding: 70px 20px 30px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 50px;
-            max-width: 1200px;
-            margin: 0 auto 50px;
-        }
-
-        .footer-col h4 {
-            margin-bottom: 25px;
-            font-size: 1.2rem;
-            color: #ffffff;
-        }
-
-        .footer-logo-img {
-            height: 70px;
-            width: auto;
-            margin-bottom: 20px;
-        }
-
-        .footer-col ul {
-            list-style: none;
-        }
-
-        .footer-col ul li {
-            margin-bottom: 12px;
-        }
-
-        .footer-col ul li a {
-            color: #cccccc;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-col ul li a:hover {
-            color: white;
-        }
-
-        .contact-info p {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 15px;
-            color: #cccccc;
-            word-wrap: break-word;
-        }
-
-        .contact-info a {
-            color: #cccccc;
-            text-decoration: none;
-            word-wrap: break-word;
-        }
-
-        .contact-info a:hover {
-            color: white;
-        }
-
-        .contact-info i {
-            width: 20px;
-            color: #ffffff;
-            flex-shrink: 0;
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: #cccccc;
-            font-size: 0.95rem;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        :target {
-            scroll-margin-top: 200px;
-        }
-
-        @media (max-width: 992px) {
-            .service-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .service-benefits {
-                position: static;
-            }
-            
-            .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .page-banner h1 {
-                font-size: 2.5rem;
-            }
-            
-            .rental-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        /* ===== MOBILE HEADER ADJUSTMENTS - LOGO LEFT, MENU RIGHT ===== */
-        @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block !important;
-            }
-            
-            .header-container {
-                padding: 8px 12px !important;
-            }
-            
-            .logo a {
-                gap: 8px !important;
-            }
-            
-            .logo-image {
-                height: 60px !important;
-                width: auto;
-            }
-            
-            .logo-text h1 {
-                font-size: 1.1rem !important;
-                margin-bottom: 2px;
-            }
-            
-            .logo-text span {
-                font-size: 0.7rem !important;
-            }
-            
-            .mobile-menu-btn {
-                font-size: 1.3rem !important;
-                padding: 8px !important;
-            }
-            
-            nav ul {
-                display: none;
-                position: fixed;
-                top: 76px;
-                left: 0;
-                width: 100%;
-                height: calc(100vh - 76px);
-                background-color: white;
-                flex-direction: column;
-                padding: 30px 20px;
-                border-top: 1px solid #e0e0e0;
-                z-index: 1000;
-                overflow-y: auto;
-                gap: 15px;
-            }
-            
-            nav ul.show {
-                display: flex;
-            }
-            
-            nav ul li {
-                width: 100%;
-            }
-            
-            nav ul li a {
-                display: block;
-                padding: 15px;
-                font-size: 1.2rem;
-                background: #f5f5f5;
-                border-radius: 8px;
-                text-align: center;
-            }
-            
-            nav ul li a.active {
-                background: #000000;
-                color: white;
-            }
-            
-            nav ul li a.active::after {
-                display: none;
-            }
-            
-            .page-banner {
-                padding: 150px 15px 100px;
-                margin-top: 76px;
-            }
-            
-            .page-banner h1 {
-                font-size: 2rem;
-            }
-            
-            .services-nav {
-                padding: 15px 0;
-            }
-            
-            .nav-links {
-                gap: 10px;
-            }
-            
-            .nav-link {
-                padding: 10px 20px;
-                font-size: 0.9rem;
-            }
-            
-            .service-header {
-                flex-direction: column;
-                text-align: center;
-                gap: 20px;
-                padding: 30px;
-            }
-            
-            .service-title h2 {
-                font-size: 2rem;
-            }
-            
-            .rental-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .service-cta h2 {
-                font-size: 2rem;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .logo-image {
-                height: 55px !important;
-            }
-            
-            .logo-text h1 {
-                font-size: 1rem !important;
-            }
-            
-            .logo-text span {
-                font-size: 0.65rem !important;
-            }
-            
-            .mobile-menu-btn {
-                font-size: 1.2rem !important;
-                padding: 6px !important;
-            }
-            
-            nav ul {
-                top: 71px;
-                height: calc(100vh - 71px);
-            }
-            
-            .page-banner {
-                margin-top: 71px;
-                padding: 120px 15px 80px;
-            }
-            
-            .page-banner h1 {
-                font-size: 1.5rem;
-            }
-            
-            .service-title h2 {
-                font-size: 1.8rem;
-            }
-            
-            .service-cta h2 {
-                font-size: 1.8rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header-container {
-                padding: 5px 10px !important;
-            }
-            
-            .logo-image {
-                height: 50px !important;
-            }
-            
-            .logo-text h1 {
-                font-size: 0.95rem !important;
-            }
-            
-            .logo-text span {
-                font-size: 0.6rem !important;
-            }
-            
-            .mobile-menu-btn {
-                font-size: 1.1rem !important;
-                padding: 5px !important;
-            }
-            
-            nav ul {
-                top: 66px;
-                height: calc(100vh - 66px);
-            }
-            
-            .page-banner {
-                margin-top: 66px;
-                padding: 100px 10px 70px;
-            }
-            
-            .page-banner h1 {
-                font-size: 1.3rem;
-            }
-            
-            .service-header {
-                padding: 20px;
-            }
-            
-            .service-title h2 {
-                font-size: 1.5rem;
-            }
-            
-            .service-icon.large {
-                font-size: 3rem;
-                width: 80px;
-                height: 80px;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .cta-buttons .btn {
-                width: 100%;
-                max-width: 300px;
-            }
-        }
-    </style>
 </head>
 <body>
 <header>
     <div class="container header-container">
         <div class="logo">
-            <a href="index.html">
-                <img src="logo.png" alt="Sarah M Projects (Pty) Ltd Logo" class="logo-image" loading="eager">
+            <a href="/">
+                <img src="logo.png" alt="Sarah M Projects - Mining Supplies, PPE & Equipment Rentals South Africa" class="logo-image" loading="eager">
                 <div class="logo-text">
                     <h1>Sarah M Projects (Pty) Ltd</h1>
-                    <span>Supplies, Logistics & Equipment Rentals</span>
+                    <span>Mining Supplies • PPE • Equipment Rentals • Logistics</span>
                 </div>
             </a>
         </div>
@@ -822,11 +35,11 @@
         </button>
         <nav>
             <ul id="navMenu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html" class="active">Services</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/services" class="active">Services</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -835,15 +48,15 @@
 <section class="page-banner">
     <div class="container">
         <h1>Our Services</h1>
-        <p>Comprehensive solutions for mining, construction, and industrial projects</p>
+        <p>Comprehensive mining supplies, PPE, equipment rentals and logistics solutions</p>
     </div>
 </section>
 
 <section class="services-nav" id="servicesNav">
     <div class="container">
         <div class="nav-links">
-            <a href="#supplies" class="nav-link active">Supplies</a>
-            <a href="#logistics" class="nav-link">Logistics</a>
+            <a href="#supplies" class="nav-link active">Mining Supplies & PPE</a>
+            <a href="#logistics" class="nav-link">Mining Logistics</a>
             <a href="#rentals" class="nav-link">Equipment Rentals</a>
         </div>
     </div>
@@ -856,7 +69,7 @@
                 <i class="fas fa-hard-hat"></i>
             </div>
             <div class="service-title">
-                <h2>Mining & Industrial Supplies</h2>
+                <h2>Mining Supplies & PPE</h2>
                 <p>Compliant safety equipment and essential site consumables</p>
             </div>
         </div>
@@ -864,23 +77,22 @@
             <div class="service-description">
                 <h3>Comprehensive Supply Solutions</h3>
                 <p>We supply a wide range of essential mine and site consumables that meet industry safety standards and operational requirements. All our products are sourced from reputable manufacturers and comply with South African safety regulations.</p>
-                
                 <div class="service-features">
                     <div class="feature">
                         <h4><i class="fas fa-check-circle"></i> Personal Protective Equipment (PPE)</h4>
-                        <p>Complete range of safety gear including helmets, goggles, ear protection, respirators, and fall protection equipment.</p>
+                        <p>Complete range of safety gear including helmets, goggles, ear protection, respirators, and fall protection equipment for mining and industrial applications.</p>
                     </div>
                     <div class="feature">
                         <h4><i class="fas fa-check-circle"></i> Safety Footwear & Workwear</h4>
-                        <p>Industrial-grade gumboots, safety shoes, protective clothing, hi-vis vests, and specialized workwear for various environments.</p>
+                        <p>Industrial-grade gumboots, safety shoes, protective clothing, hi-vis vests, and specialized workwear for various mining environments.</p>
                     </div>
                     <div class="feature">
                         <h4><i class="fas fa-check-circle"></i> Site Consumables</h4>
-                        <p>Essential supplies including safety signage, barriers, first aid kits, fire extinguishers, and general site maintenance materials.</p>
+                        <p>Essential supplies including safety signage, barriers, first aid kits, fire extinguishers, and general site maintenance materials for mining operations.</p>
                     </div>
                     <div class="feature">
                         <h4><i class="fas fa-check-circle"></i> Quality Assurance</h4>
-                        <p>All products are certified and regularly tested to ensure they meet the highest safety standards and regulatory requirements.</p>
+                        <p>All products are certified and regularly tested to ensure they meet the highest safety standards and regulatory requirements for the mining industry.</p>
                     </div>
                 </div>
             </div>
@@ -905,27 +117,26 @@
                 <i class="fas fa-truck-moving"></i>
             </div>
             <div class="service-title">
-                <h2>Logistics Services</h2>
-                <p>Reliable transportation and delivery solutions</p>
+                <h2>Mining Logistics Services</h2>
+                <p>Reliable transportation and delivery solutions for mining projects</p>
             </div>
         </div>
         <div class="service-content">
             <div class="service-description">
                 <h3>Efficient Logistics Management</h3>
-                <p>Our logistics services ensure timely and secure transportation of goods, materials, and equipment to support operational continuity across various project requirements.</p>
-                
+                <p>Our mining logistics services ensure timely and secure transportation of goods, materials, and equipment to support operational continuity across various mining and construction projects.</p>
                 <div class="service-features">
                     <div class="feature">
                         <h4><i class="fas fa-check-circle"></i> Transportation Services</h4>
-                        <p>Comprehensive transport solutions for goods, materials, and equipment using our modern fleet of vehicles.</p>
+                        <p>Comprehensive transport solutions for mining supplies, materials, and equipment using our modern fleet of vehicles.</p>
                     </div>
                     <div class="feature">
                         <h4><i class="fas fa-check-circle"></i> Project Logistics</h4>
-                        <p>Tailored logistics support for specific project requirements including site-to-site and long-distance deliveries.</p>
+                        <p>Tailored logistics support for specific mining project requirements including site-to-site and long-distance deliveries.</p>
                     </div>
                     <div class="feature">
                         <h4><i class="fas fa-check-circle"></i> Ad Hoc Support</h4>
-                        <p>Flexible logistics solutions for urgent or unexpected delivery requirements to keep your project on schedule.</p>
+                        <p>Flexible logistics solutions for urgent or unexpected delivery requirements to keep your mining project on schedule.</p>
                     </div>
                     <div class="feature">
                         <h4><i class="fas fa-check-circle"></i> Tracking & Reporting</h4>
@@ -939,7 +150,7 @@
                     <li><i class="fas fa-road"></i> Nationwide coverage across South Africa</li>
                     <li><i class="fas fa-calendar-check"></i> Scheduled and on-demand deliveries</li>
                     <li><i class="fas fa-lock"></i> Secure transportation with insurance</li>
-                    <li><i class="fas fa-map-marked-alt"></i> Remote site accessibility</li>
+                    <li><i class="fas fa-map-marked-alt"></i> Remote mining site accessibility</li>
                     <li><i class="fas fa-chart-line"></i> Cost-effective logistics solutions</li>
                 </ul>
             </div>
@@ -954,27 +165,26 @@
                 <i class="fas fa-tools"></i>
             </div>
             <div class="service-title">
-                <h2>Equipment & Site Services Rentals</h2>
-                <p>Flexible rental solutions for short and long-term needs</p>
+                <h2>Industrial Equipment Rentals</h2>
+                <p>Flexible rental solutions for mining and construction projects</p>
             </div>
         </div>
         <div class="service-content">
             <div class="service-description">
                 <h3>Comprehensive Rental Solutions</h3>
-                <p>We provide flexible rental solutions designed to support both short-term and long-term site operations with well-maintained, reliable equipment.</p>
-                
+                <p>We provide flexible rental solutions designed to support both short-term and long-term mining operations with well-maintained, reliable industrial equipment.</p>
                 <div class="rental-grid">
                     <div class="rental-item">
                         <h4><i class="fas fa-toilet"></i> Mobile Sanitation</h4>
-                        <p>Hygiene units, mobile toilets, and washing facilities for remote sites and construction projects.</p>
+                        <p>Hygiene units, mobile toilets, and washing facilities for remote mining sites and construction projects.</p>
                     </div>
                     <div class="rental-item">
                         <h4><i class="fas fa-lightbulb"></i> Lighting Solutions</h4>
-                        <p>Lighting plants, tower lights, and portable lighting for night operations and remote locations.</p>
+                        <p>Lighting plants, tower lights, and portable lighting for night mining operations and remote locations.</p>
                     </div>
                     <div class="rental-item">
                         <h4><i class="fas fa-bolt"></i> Power Generation</h4>
-                        <p>Generators and temporary power solutions from 5kVA to 500kVA for various power requirements.</p>
+                        <p>Generators and temporary power solutions from 5kVA to 500kVA for various mining power requirements.</p>
                     </div>
                 </div>
             </div>
@@ -990,7 +200,7 @@
                 <div class="cta-box">
                     <h4>Need Equipment?</h4>
                     <p>Contact us for availability and pricing</p>
-                    <a href="contact.html" class="btn">Request a Quote</a>
+                    <a href="/contact" class="btn">Request a Quote</a>
                 </div>
             </div>
         </div>
@@ -999,10 +209,10 @@
 
 <section class="service-cta">
     <div class="container">
-        <h2>Custom Solutions for Your Project</h2>
-        <p>Every project is unique. Contact us to discuss your specific requirements and receive a tailored solution.</p>
+        <h2>Custom Solutions for Your Mining Project</h2>
+        <p>Every mining project is unique. Contact us to discuss your specific requirements and receive a tailored solution.</p>
         <div class="cta-buttons">
-            <a href="contact.html" class="btn">Get a Custom Quote</a>
+            <a href="/contact" class="btn">Get a Custom Quote</a>
             <a href="tel:0674031185" class="btn btn-outline">Call Now: 067 403 1185</a>
         </div>
     </div>
@@ -1011,26 +221,26 @@
 <footer>
     <div class="container footer-grid">
         <div class="footer-col">
-            <img src="logo.png" alt="Sarah M Projects (Pty) Ltd Logo" class="footer-logo-img" loading="lazy">
-            <p>Supplies, Logistics & Equipment Rentals</p>
+            <img src="logo.png" alt="Sarah M Projects - Mining Supplies, PPE & Equipment Rentals South Africa" class="footer-logo-img" loading="lazy">
+            <p>Mining Supplies • PPE • Equipment Rentals • Logistics</p>
             <p style="font-size: 0.9rem; margin-top: 15px; opacity: 0.8;">Sarah M Projects (Pty) Ltd – A Registered Private Company in South Africa</p>
         </div>
         <div class="footer-col">
             <h4>Quick Links</h4>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
         </div>
         <div class="footer-col">
-            <h4>Services</h4>
+            <h4>Our Services</h4>
             <ul>
-                <li><a href="#supplies">Industrial Supplies</a></li>
-                <li><a href="#logistics">Logistics Services</a></li>
-                <li><a href="#rentals">Equipment Rentals</a></li>
+                <li><a href="/services#supplies">Mining Supplies & PPE</a></li>
+                <li><a href="/services#logistics">Mining Logistics Services</a></li>
+                <li><a href="/services#rentals">Industrial Equipment Rentals</a></li>
             </ul>
         </div>
         <div class="footer-col">
@@ -1044,65 +254,10 @@
         </div>
     </div>
     <div class="copyright">
-        <p>&copy; <span id="currentYear">2026</span> Sarah M Projects (Pty) Ltd. All rights reserved.</p>
+        <p>&copy; <span id="currentYear">2026</span> Sarah M Projects (Pty) Ltd - Mining Supplies, PPE, Equipment Rentals & Logistics South Africa. All rights reserved.</p>
     </div>
 </footer>
 
-<script>
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-    
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const navMenu = document.getElementById('navMenu');
-    
-    if (mobileMenuBtn && navMenu) {
-        mobileMenuBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            navMenu.classList.toggle('show');
-            const icon = this.querySelector('i');
-            if (navMenu.classList.contains('show')) {
-                icon.className = 'fas fa-times';
-                document.body.style.overflow = 'hidden';
-            } else {
-                icon.className = 'fas fa-bars';
-                document.body.style.overflow = '';
-            }
-        });
-        
-        navMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('show');
-                mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
-                document.body.style.overflow = '';
-            });
-        });
-        
-        document.addEventListener('click', function(e) {
-            if (navMenu.classList.contains('show') && 
-                !navMenu.contains(e.target) && 
-                !mobileMenuBtn.contains(e.target)) {
-                navMenu.classList.remove('show');
-                mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
-                document.body.style.overflow = '';
-            }
-        });
-    }
-
-    // Smooth scroll for service navigation
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                const headerHeight = window.innerWidth <= 768 ? 76 : 130;
-                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-                
-                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-                this.classList.add('active');
-            }
-        });
-    });
-</script>
+<script src="script.js"></script>
 </body>
 </html>
