@@ -153,11 +153,11 @@ document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
 });
 
 function setActiveNav() {
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const currentPath = window.location.pathname.replace('.html', '').replace(/\/$/, '') || 'index';
     document.querySelectorAll('#navMenu a').forEach(link => {
-        const linkHref = link.getAttribute('href');
+        const linkHref = link.getAttribute('href').replace(/^\//, '').replace('.html', '');
         link.classList.remove('active');
-        if (linkHref === currentPage) {
+        if (currentPath === linkHref || (currentPath === 'index' && linkHref === '')) {
             link.classList.add('active');
         }
     });
@@ -167,7 +167,7 @@ function updateActiveNavOnScroll() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('#navMenu a');
     
-    if (sections.length === 0 || window.location.pathname.includes('services.html')) return;
+    if (sections.length === 0 || window.location.pathname.includes('services')) return;
     
     let current = '';
     const scrollPosition = window.scrollY + 200;
@@ -200,18 +200,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('a[href$=".html"]');
     links.forEach(link => {
         const href = link.getAttribute('href');
-        if (href !== 'index.html') {
-            link.setAttribute('href', href.replace('.html', ''));
-        } else {
+        if (href === 'index.html') {
             link.setAttribute('href', '/');
-        }
-    });
-    
-    const currentPath = window.location.pathname.replace('.html', '').replace(/\/$/, '');
-    document.querySelectorAll('#navMenu a').forEach(link => {
-        const linkPath = link.getAttribute('href').replace(/^\//, '');
-        if (currentPath === linkPath || (currentPath === '' && linkPath === '')) {
-            link.classList.add('active');
+        } else {
+            link.setAttribute('href', href.replace('.html', ''));
         }
     });
     
