@@ -1,3 +1,4 @@
+// Mobile menu functionality - UPDATED
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const navMenu = document.getElementById('navMenu');
 
@@ -45,6 +46,7 @@ if (mobileMenuBtn && navMenu) {
     });
 }
 
+// Service navigation smooth scroll - UPDATED
 const serviceNavLinks = document.querySelectorAll('.nav-link');
 if (serviceNavLinks.length > 0) {
     serviceNavLinks.forEach(link => {
@@ -57,8 +59,11 @@ if (serviceNavLinks.length > 0) {
                 serviceNavLinks.forEach(l => l.classList.remove('active'));
                 this.classList.add('active');
                 
+                const headerHeight = window.innerWidth <= 768 ? 76 : 140;
+                const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                
                 window.scrollTo({
-                    top: targetElement.offsetTop - 120,
+                    top: targetPosition,
                     behavior: 'smooth'
                 });
             }
@@ -66,6 +71,7 @@ if (serviceNavLinks.length > 0) {
     });
 }
 
+// Contact form handling - UPDATED
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', async function(e) {
@@ -77,6 +83,7 @@ if (contactForm) {
         
         if (!formMessage) return;
         
+        // Validate required fields
         let isValid = true;
         const requiredFields = this.querySelectorAll('[required]');
         requiredFields.forEach(field => {
@@ -131,6 +138,7 @@ if (contactForm) {
     });
 }
 
+// Smooth scroll for hash links - UPDATED
 document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -138,7 +146,7 @@ document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
         const targetElement = document.querySelector(targetId);
         
         if (targetElement) {
-            const headerHeight = document.querySelector('header').offsetHeight;
+            const headerHeight = window.innerWidth <= 768 ? 76 : 140;
             const targetPosition = targetElement.offsetTop - headerHeight - 20;
             
             window.scrollTo({
@@ -149,6 +157,7 @@ document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
     });
 });
 
+// Set active navigation based on current page
 function setActiveNav() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('#navMenu a').forEach(link => {
@@ -160,6 +169,7 @@ function setActiveNav() {
     });
 }
 
+// Update active nav on scroll (for single page sections)
 function updateActiveNavOnScroll() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('#navMenu a');
@@ -168,9 +178,10 @@ function updateActiveNavOnScroll() {
     
     let current = '';
     const scrollPosition = window.scrollY + 200;
+    const headerHeight = window.innerWidth <= 768 ? 76 : 140;
     
     sections.forEach(section => {
-        const sectionTop = section.offsetTop;
+        const sectionTop = section.offsetTop - headerHeight;
         const sectionBottom = sectionTop + section.offsetHeight;
         
         if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
@@ -186,34 +197,43 @@ function updateActiveNavOnScroll() {
     });
 }
 
+// Document ready
 document.addEventListener('DOMContentLoaded', function() {
+    // Set current year in footer
     document.querySelectorAll('#currentYear').forEach(element => {
         element.textContent = new Date().getFullYear();
     });
     
+    // Set active navigation
     setActiveNav();
     
+    // Detect touch device
     if ('ontouchstart' in window) {
         document.body.classList.add('touch-device');
     }
     
+    // Log success
     console.log('Sarah M Projects (Pty) Ltd loaded successfully');
 });
 
+// Scroll event listener
 window.addEventListener('scroll', updateActiveNavOnScroll);
 
+// Track phone clicks
 document.querySelectorAll('a[href^="tel:"]').forEach(phone => {
     phone.addEventListener('click', function() {
         console.log('Phone call initiated');
     });
 });
 
+// Track email clicks
 document.querySelectorAll('a[href^="mailto:"]').forEach(email => {
     email.addEventListener('click', function() {
         console.log('Email link clicked');
     });
 });
 
+// Track WhatsApp clicks
 document.querySelectorAll('a[href*="wa.me"]').forEach(whatsapp => {
     whatsapp.addEventListener('click', function() {
         console.log('WhatsApp chat initiated');
