@@ -10,10 +10,12 @@ if (mobileMenuBtn && navMenu) {
         if (isOpen) {
             navMenu.classList.remove('show');
             mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            mobileMenuBtn.setAttribute('aria-label', 'Open menu');
             document.body.classList.remove('menu-open');
         } else {
             navMenu.classList.add('show');
             mobileMenuBtn.innerHTML = '<i class="fas fa-times"></i>';
+            mobileMenuBtn.setAttribute('aria-label', 'Close menu');
             document.body.classList.add('menu-open');
         }
     });
@@ -22,6 +24,7 @@ if (mobileMenuBtn && navMenu) {
         link.addEventListener('click', function() {
             navMenu.classList.remove('show');
             mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            mobileMenuBtn.setAttribute('aria-label', 'Open menu');
             document.body.classList.remove('menu-open');
         });
     });
@@ -32,6 +35,7 @@ if (mobileMenuBtn && navMenu) {
             !mobileMenuBtn.contains(e.target)) {
             navMenu.classList.remove('show');
             mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            mobileMenuBtn.setAttribute('aria-label', 'Open menu');
             document.body.classList.remove('menu-open');
         }
     });
@@ -40,6 +44,7 @@ if (mobileMenuBtn && navMenu) {
         if (window.innerWidth > 768 && navMenu.classList.contains('show')) {
             navMenu.classList.remove('show');
             mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            mobileMenuBtn.setAttribute('aria-label', 'Open menu');
             document.body.classList.remove('menu-open');
         }
     });
@@ -61,7 +66,7 @@ if (serviceNavLinks.length > 0) {
                 const targetPosition = targetElement.offsetTop - headerHeight - 20;
                 
                 window.scrollTo({
-                    top: targetPosition,
+                    top: Math.max(0, targetPosition),
                     behavior: 'smooth'
                 });
             }
@@ -145,7 +150,7 @@ document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
             const targetPosition = targetElement.offsetTop - headerHeight - 20;
             
             window.scrollTo({
-                top: targetPosition,
+                top: Math.max(0, targetPosition),
                 behavior: 'smooth'
             });
         }
@@ -153,9 +158,9 @@ document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
 });
 
 function setActiveNav() {
-    const currentPath = window.location.pathname.replace('.html', '').replace(/\/$/, '') || 'index';
+    const currentPath = window.location.pathname.replace(/\.html$/, '').replace(/\/$/, '') || 'index';
     document.querySelectorAll('#navMenu a').forEach(link => {
-        const linkHref = link.getAttribute('href').replace(/^\//, '').replace('.html', '');
+        const linkHref = link.getAttribute('href').replace(/^\//, '').replace(/\.html$/, '');
         link.classList.remove('active');
         if (currentPath === linkHref || (currentPath === 'index' && linkHref === '')) {
             link.classList.add('active');
@@ -203,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (href === 'index.html') {
             link.setAttribute('href', '/');
         } else {
-            link.setAttribute('href', href.replace('.html', ''));
+            link.setAttribute('href', href.replace(/\.html$/, ''));
         }
     });
     
@@ -211,10 +216,10 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.add('touch-device');
     }
     
-    console.log('Sarah M Projects (Pty) Ltd loaded successfully');
+    mobileMenuBtn?.setAttribute('aria-label', 'Open menu');
 });
 
-window.addEventListener('scroll', updateActiveNavOnScroll);
+window.addEventListener('scroll', updateActiveNavOnScroll, { passive: true });
 
 document.querySelectorAll('a[href^="tel:"]').forEach(phone => {
     phone.addEventListener('click', function() {
