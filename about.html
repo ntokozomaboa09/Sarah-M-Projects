@@ -20,12 +20,117 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Temporary fix for logo display */
-        .footer-logo {
-            display: block;
-            margin: 0 auto 15px;
-            max-width: 200px;
-            height: auto;
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr !important;
+                gap: 30px !important;
+                text-align: left !important;
+            }
+            .footer-col {
+                text-align: left !important;
+                padding: 0 5px !important;
+            }
+            .footer-col h4 {
+                font-size: 1.1rem !important;
+                margin-bottom: 15px !important;
+                color: #ffffff !important;
+                position: relative !important;
+                padding-bottom: 8px !important;
+            }
+            .footer-col h4::after {
+                content: '' !important;
+                position: absolute !important;
+                bottom: 0 !important;
+                left: 0 !important;
+                width: 40px !important;
+                height: 2px !important;
+                background-color: #ffffff !important;
+            }
+            .footer-logo-img {
+                height: 60px !important;
+                width: auto !important;
+                margin-bottom: 15px !important;
+                filter: brightness(0) invert(1);
+            }
+            .footer-col p {
+                font-size: 0.9rem !important;
+                line-height: 1.6 !important;
+                margin-bottom: 10px !important;
+                opacity: 0.9 !important;
+            }
+            .footer-col ul {
+                list-style: none !important;
+                padding: 0 !important;
+            }
+            .footer-col ul li {
+                margin-bottom: 10px !important;
+            }
+            .footer-col ul li a {
+                color: #cccccc !important;
+                text-decoration: none !important;
+                font-size: 0.9rem !important;
+                transition: all 0.3s ease !important;
+                display: inline-block !important;
+                padding: 2px 0 !important;
+            }
+            .footer-col ul li a:hover {
+                color: white !important;
+                transform: translateX(5px) !important;
+            }
+            .contact-info p {
+                display: flex !important;
+                align-items: center !important;
+                gap: 10px !important;
+                margin-bottom: 12px !important;
+                font-size: 0.9rem !important;
+                word-break: break-word !important;
+            }
+            .contact-info i {
+                width: 20px !important;
+                color: #ffffff !important;
+                flex-shrink: 0 !important;
+                font-size: 1rem !important;
+            }
+            .contact-info a {
+                color: #cccccc !important;
+                text-decoration: none !important;
+                word-break: break-word !important;
+                flex: 1 !important;
+            }
+            .copyright {
+                text-align: center !important;
+                padding-top: 25px !important;
+                margin-top: 10px !important;
+                font-size: 0.85rem !important;
+                line-height: 1.6 !important;
+                border-top: 1px solid rgba(255,255,255,0.1) !important;
+            }
+            .copyright p {
+                margin: 0 !important;
+                opacity: 0.8 !important;
+            }
+        }
+        @media (max-width: 480px) {
+            .footer-logo-img {
+                height: 50px !important;
+            }
+            .footer-col h4 {
+                font-size: 1rem !important;
+            }
+            .footer-col ul li a {
+                font-size: 0.85rem !important;
+            }
+            .contact-info p {
+                font-size: 0.85rem !important;
+            }
+            .copyright {
+                font-size: 0.8rem !important;
+            }
+        }
+        @media (max-width: 360px) {
+            .footer-col ul li a {
+                font-size: 0.8rem !important;
+            }
         }
     </style>
 </head>
@@ -55,33 +160,26 @@
         </nav>
     </div>
 </header>
-
 <section class="page-banner">
     <div class="container">
         <h1>About Us</h1>
         <p>Delivering excellence in mining supplies, PPE, equipment rentals and logistics</p>
     </div>
 </section>
-
 <section class="company-overview">
     <div class="container">
         <div class="overview-content">
             <div class="overview-text">
                 <h2>Our Story</h2>
                 <p>Established in 2026, Sarah M Projects (Pty) Ltd is a dynamic and forward-thinking company dedicated to providing exceptional operational support to South Africa's mining, construction, and industrial sectors. Founded by industry professionals with extensive experience in mining operations and supply chain management, our company was built on the understanding that successful projects depend on trusted partnerships and dependable supply chains.</p>
-                
                 <p>At Sarah M Projects (Pty) Ltd, we specialize in mining supplies, PPE, logistics, and equipment rentals, ensuring that our clients have access to the best resources required to keep their operations running smoothly and efficiently. We are committed to providing top-quality Personal Protective Equipment (PPE) and essential industrial supplies that meet industry safety standards, helping organisations maintain safe and compliant work environments.</p>
-                
                 <p>Guided by our core values of safety, reliability, and customer-centric service, we focus on building strong and lasting partnerships with our clients. By taking a collaborative approach, we carefully understand each client's unique operational needs and deliver tailored solutions that enhance productivity, improve efficiency, and contribute to the overall success of their projects.</p>
-                
                 <p>Today, we serve clients across all nine South African provinces, from major mining operations in the Northern Cape to construction projects in Gauteng and industrial developments in Mpumalanga. Our growth is driven by our unwavering commitment to quality, safety, and customer satisfaction. As a 100% South African owned and managed company with B-BBEE Level 1 status (135% procurement recognition), we understand the local landscape, regulations, and challenges. We're proud to contribute to the success of projects that drive our nation's economy forward.</p>
-                
                 <p style="margin-top: 30px; font-size: 1.2rem; font-weight: 600; color: var(--primary); border-left: 4px solid var(--primary); padding-left: 20px;">Established under the leadership and vision of Ntokozo Maboa, Sarah M Projects (Pty) Ltd reflects a strong commitment to excellence, innovation, and dependable service in supporting industry growth. Driven by a strong commitment to excellence and continuous growth, the company is built on a fresh, innovative perspective and a passion for delivering results. With a focus on understanding client needs and creating real value, Sarah M Projects (Pty) Ltd is dedicated to growing into a trusted and reliable partner within the industry. Ntokozo brings years of practical experience in mining operations and supply chain management, ensuring that our services are grounded in real-world understanding of client needs.</p>
             </div>
         </div>
     </div>
 </section>
-
 <section class="mission-vision">
     <div class="container">
         <div class="mv-grid">
@@ -90,13 +188,11 @@
                 <h3>Our Mission</h3>
                 <p>To deliver exceptional mining supplies, PPE, logistics, and equipment rental services that enhance operational efficiency, ensure safety compliance, and support the success of our clients' projects across South Africa. We strive to be the partner our clients can depend on, providing reliable solutions that keep their operations running smoothly and safely.</p>
             </div>
-            
             <div class="mv-card">
                 <div class="mv-icon"><i class="fas fa-eye"></i></div>
                 <h3>Our Vision</h3>
                 <p>To be the leading provider of integrated operational support services in Southern Africa, recognized for our commitment to quality, innovation, and sustainable business practices. We envision a future where Sarah M Projects is the first choice for mining, construction, and industrial companies seeking reliable, compliant, and value-driven supply and rental solutions.</p>
             </div>
-            
             <div class="mv-card">
                 <div class="mv-icon"><i class="fas fa-handshake"></i></div>
                 <h3>Our Values</h3>
@@ -105,14 +201,12 @@
         </div>
     </div>
 </section>
-
 <section class="leadership-section">
     <div class="container">
         <div class="section-title">
             <h2>Our Leadership</h2>
             <p>Experienced leadership driving excellence and innovation</p>
         </div>
-        
         <div class="leadership-card">
             <div class="leader-icon">
                 <i class="fas fa-user-tie"></i>
@@ -127,7 +221,6 @@
         </div>
     </div>
 </section>
-
 <section class="why-different">
     <div class="container">
         <h2>Why Sarah M Projects Is Different</h2>
@@ -137,19 +230,16 @@
                 <h3>Industry Experience</h3>
                 <p>Our team brings practical experience from within the mining and construction sectors. We don't just supply products - we understand how they're used, the challenges you face, and what it takes to keep projects on track. This insider perspective means we can anticipate needs and provide solutions that actually work in real-world conditions.</p>
             </div>
-            
             <div class="different-card">
                 <i class="fas fa-hand-holding-heart"></i>
                 <h3>Genuine Partnership</h3>
                 <p>We view our clients as partners, not just customers. We take time to understand your specific operations, challenges, and goals. This partnership approach means we're invested in your success and work proactively to support your objectives. When you succeed, we succeed.</p>
             </div>
-            
             <div class="different-card">
                 <i class="fas fa-certificate"></i>
                 <h3>Uncompromising Compliance</h3>
                 <p>Full CIPC registration, SARS tax compliance, and B-BBEE Level 1 Contributor with 135% procurement recognition aren't just boxes to tick - they're commitments to operating properly and ethically. We maintain all necessary certifications and can provide documentation for your procurement and compliance requirements without delay.</p>
             </div>
-            
             <div class="different-card">
                 <i class="fas fa-phone-alt"></i>
                 <h3>24/7 Availability</h3>
@@ -158,27 +248,23 @@
         </div>
     </div>
 </section>
-
 <section class="markets">
     <div class="container">
         <div class="section-title">
             <h2>Markets We Serve</h2>
             <p>Specialized solutions for diverse industries</p>
         </div>
-        
         <div class="markets-grid">
             <div class="market-card">
                 <div class="market-icon"><i class="fas fa-mountain"></i></div>
                 <h3>Mining Operations</h3>
                 <p>From exploration to production, we support mining projects with essential supplies, PPE, and equipment rentals that meet stringent safety standards. Our experience spans gold, platinum, coal, diamond, and base metal operations across South Africa, including both underground and surface mining applications.</p>
             </div>
-            
             <div class="market-card">
                 <div class="market-icon"><i class="fas fa-tools"></i></div>
                 <h3>Construction Projects</h3>
                 <p>Residential, commercial, and infrastructure construction projects benefit from our timely deliveries and reliable equipment solutions. We understand construction timelines and the importance of having materials and equipment when and where they're needed. Our logistics team ensures your site never waits.</p>
             </div>
-            
             <div class="market-card">
                 <div class="market-icon"><i class="fas fa-industry"></i></div>
                 <h3>Industrial Developments</h3>
@@ -187,14 +273,11 @@
         </div>
     </div>
 </section>
-
 <section class="commitment">
     <div class="container">
         <h2>Our Commitment to You</h2>
         <p>At Sarah M Projects (Pty) Ltd, we're more than just a service provider - we're your operational partner. We take the time to understand your project requirements, challenges, and objectives. Our team of experienced professionals works diligently to ensure that every delivery is on time, every piece of equipment is in perfect working condition, and every safety standard is met or exceeded.</p>
-        
         <p>We believe that success is built on trust, which is why we're committed to transparent communication, fair pricing, and building long-term relationships with our clients. When you work with us, you get:</p>
-        
         <ul style="list-style: none; margin: 30px 0; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto;">
             <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: white; margin-right: 10px;"></i> Dedicated account manager for your project</li>
             <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: white; margin-right: 10px;"></i> Transparent pricing with no hidden fees</li>
@@ -202,74 +285,48 @@
             <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: white; margin-right: 10px;"></i> 24/7 emergency support when you need it</li>
             <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: white; margin-right: 10px;"></i> Full compliance documentation for your records including B-BBEE Level 1 certificate</li>
         </ul>
-        
         <a href="/contact" class="btn btn-large">Partner With Us Today</a>
     </div>
 </section>
-
-<!-- FOOTER EXACTLY AS SHOWN IN THE IMAGE -->
 <footer>
-    <div class="container">
-        <!-- Company name and tagline -->
-        <div style="text-align: center; margin-bottom: 20px;">
-            <h1 style="color: white; font-size: 2rem; margin-bottom: 5px; font-weight: bold;">Sarah M Projects (Pty) Ltd</h1>
-            <p style="color: #cccccc; font-size: 1rem; margin-bottom: 20px;">Mining Supplies · PPE · Equipment Rentals · Logistics</p>
+    <div class="container footer-grid">
+        <div class="footer-col">
+            <img src="logo.png" alt="Sarah M Projects - Mining Supplies, PPE & Equipment Rentals South Africa" class="footer-logo-img" loading="lazy">
+            <p>Mining Supplies • PPE • Equipment Rentals • Logistics</p>
+            <p style="font-size: 0.9rem; margin-top: 15px; opacity: 0.8;">Sarah M Projects (Pty) Ltd – A Registered Private Company in South Africa</p>
         </div>
-        
-        <!-- Separator line -->
-        <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 20px 0;">
-        
-        <!-- Second line with same tagline and company info -->
-        <div style="text-align: center; margin-bottom: 30px;">
-            <p style="color: #cccccc; font-size: 0.95rem; line-height: 1.6; margin-bottom: 5px;">Mining Supplies · PPE · Equipment Rentals · Logistics</p>
-            <p style="color: #cccccc; font-size: 0.95rem;">Sarah M Projects (Pty) Ltd – A Registered Private Company in South Africa</p>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
         </div>
-        
-        <!-- Separator line -->
-        <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 20px 0;">
-        
-        <!-- Three-column footer grid -->
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; max-width: 900px; margin: 30px auto; text-align: left;">
-            <!-- Quick Links -->
-            <div>
-                <h2 style="color: white; font-size: 1.3rem; margin-bottom: 20px; font-weight: bold;">Quick Links</h2>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 10px;"><a href="/" style="color: #cccccc; text-decoration: none; font-size: 1rem;">Home</a></li>
-                    <li style="margin-bottom: 10px;"><a href="/about" style="color: #cccccc; text-decoration: none; font-size: 1rem;">About</a></li>
-                    <li style="margin-bottom: 10px;"><a href="/services" style="color: #cccccc; text-decoration: none; font-size: 1rem;">Services</a></li>
-                    <li style="margin-bottom: 10px;"><a href="/projects" style="color: #cccccc; text-decoration: none; font-size: 1rem;">Projects</a></li>
-                    <li style="margin-bottom: 10px;"><a href="/contact" style="color: #cccccc; text-decoration: none; font-size: 1rem;">Contact</a></li>
-                </ul>
-            </div>
-            
-            <!-- Our Services -->
-            <div>
-                <h2 style="color: white; font-size: 1.3rem; margin-bottom: 20px; font-weight: bold;">Our Services</h2>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 10px;"><a href="/services#supplies" style="color: #cccccc; text-decoration: none; font-size: 1rem;">Mining Supplies & PPE</a></li>
-                    <li style="margin-bottom: 10px;"><a href="/services#logistics" style="color: #cccccc; text-decoration: none; font-size: 1rem;">Mining Logistics Services</a></li>
-                    <li style="margin-bottom: 10px;"><span style="color: #cccccc; font-size: 1rem;">Industrial Equipment Rentals</span></li>
-                </ul>
-            </div>
-            
-            <!-- Contact -->
-            <div>
-                <h2 style="color: white; font-size: 1.3rem; margin-bottom: 20px; font-weight: bold;">Contact</h2>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 10px; color: #cccccc; font-size: 1rem;">📞 <a href="tel:0674031185" style="color: #cccccc; text-decoration: none;">067 403 1185</a></li>
-                    <li style="margin-bottom: 10px; color: #cccccc; font-size: 1rem;">🌐 <a href="mailto:sarahmprojects.inquiries@gmail.com" style="color: #cccccc; text-decoration: none;">sarahmprojects.inquiries@gmail.com</a></li>
-                    <li style="margin-bottom: 10px; color: #cccccc; font-size: 1rem;">🔗 South Africa</li>
-                </ul>
-            </div>
+        <div class="footer-col">
+            <h4>Our Services</h4>
+            <ul>
+                <li><a href="/services#supplies">Mining Supplies & PPE</a></li>
+                <li><a href="/services#logistics">Mining Logistics Services</a></li>
+                <li><a href="/services#rentals">Industrial Equipment Rentals</a></li>
+            </ul>
         </div>
-        
-        <!-- Copyright -->
-        <div style="text-align: center; padding-top: 30px; margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
-            <p style="color: #cccccc; font-size: 0.9rem;">&copy; <span id="currentYear">2026</span> Sarah M Projects (Pty) Ltd - Mining Supplies, PPE, Equipment Rentals & Logistics South Africa. All rights reserved.</p>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <div class="contact-info">
+                <p><i class="fas fa-phone"></i> <a href="tel:0674031185">067 403 1185</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:sarahmprojects.inquiries@gmail.com">sarahmprojects.inquiries@gmail.com</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> South Africa</p>
+                <p><i class="fas fa-globe"></i> <a href="https://sarahmprojects.co.za" target="_blank">sarahmprojects.co.za</a></p>
+            </div>
         </div>
     </div>
+    <div class="copyright">
+        <p>&copy; <span id="currentYear">2026</span> Sarah M Projects (Pty) Ltd - Mining Supplies, PPE, Equipment Rentals & Logistics South Africa. All rights reserved.</p>
+    </div>
 </footer>
-
 <script src="script.js"></script>
 </body>
 </html>
