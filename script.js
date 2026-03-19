@@ -202,21 +202,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     setActiveNav();
     
-    const links = document.querySelectorAll('a[href$=".html"]');
-    links.forEach(link => {
-        const href = link.getAttribute('href');
-        if (href === 'index.html') {
-            link.setAttribute('href', '/');
-        } else {
-            link.setAttribute('href', href.replace(/\.html$/, ''));
-        }
-    });
-    
     if ('ontouchstart' in window) {
         document.body.classList.add('touch-device');
     }
     
-    mobileMenuBtn?.setAttribute('aria-label', 'Open menu');
+    if (mobileMenuBtn) {
+        mobileMenuBtn.setAttribute('aria-label', 'Open menu');
+    }
 });
 
 window.addEventListener('scroll', updateActiveNavOnScroll, { passive: true });
